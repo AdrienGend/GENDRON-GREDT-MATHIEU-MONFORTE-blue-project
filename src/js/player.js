@@ -39,10 +39,36 @@ class Player {
     set name(name) {
         this._name = name;
     }
+    set gold(gold) {
+        this._gold = gold;
+    }
+    set faith(faith) {
+        this._faith = faith;
+    }
+    set army(army) {
+        this._army = army;
+    }
+    set population(population) {
+        this._population = population;
+    }
+
     //getters
     get name() {
         return this._name;
     }
+    get gold() {
+        return this._gold;
+    }
+    get faith() {
+        return this._faith;
+    }
+    get army() {
+        return this._army;
+    }
+    get population() {
+        return this._population;
+    }
+    
 }
 
 

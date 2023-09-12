@@ -1,3 +1,10 @@
+let pseudo = document.querySelector("#pseudo");
+let army = document.querySelector("#military");
+let gold = document.querySelector("#gold");
+let faith = document.querySelector("#faith");
+let population = document.querySelector("#population");
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const backpack = document.getElementById('backpack');
     const dropdown = document.getElementById('dropdown');
@@ -15,3 +22,42 @@ document.addEventListener('DOMContentLoaded', function () {
         backpack.style.display = 'block';
     });
 });
+
+//récupération des données du joueur
+function getPlayer() {
+    let player = localStorage.getItem("player");
+    player = JSON.parse(player);
+    return player;
+}
+
+//affichage informations joueur
+function displayPseudo() {
+    let player = getPlayer();
+    pseudo.innerHTML = player._name;
+}
+
+function displayGold() {
+    let player = getPlayer();
+    gold.innerHTML = player._gold;
+}
+
+function displayFaith() {
+    let player = getPlayer();
+    faith.innerHTML = player._faith;
+}
+
+function displayArmy() {
+    let player = getPlayer();
+    army.innerHTML = player._army;
+}
+
+function displayPopulation() {
+    let player = getPlayer();
+    population.innerHTML = player._population;
+}
+
+displayPseudo();
+displayGold();
+displayFaith();
+displayArmy();
+displayPopulation();
