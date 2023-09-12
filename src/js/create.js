@@ -3,6 +3,10 @@ let button = document.querySelector("#button");
 let form = document.querySelector("#choice");
 let choice = document.querySelector("#choice input:checked").value;
 
+function launchGame() {
+    window.location.href = "game.html";
+    console.log("launchGame");
+}
 
 function initialize() {
     console.log("initialize");
@@ -22,6 +26,7 @@ function initialize() {
     player = JSON.stringify(player);
     console.log(player);
     localStorage.setItem("player", player);
+    launchGame();
     
 }
 

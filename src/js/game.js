@@ -63,8 +63,8 @@ function displayInventory() {
     let inventory = player.inventory;
     for (let i = 0; i < inventory.length ; i++) {
         itemImage = inventory[i].image;
-        console.log(inventory[i].name);
-        itemStockage.innerHTML += `<img src="./image/amulettederichesse.png" alt="item">`
+        console.log(itemImage);
+        itemStockage.innerHTML += `<img src="${itemImage}" alt="item">`
     }
 }
 
