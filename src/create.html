@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Créer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="./css/game.css">
+  <link type="text/css" rel="stylesheet" href="./css/header.css">
+  <link type="text/css" rel="stylesheet" href="./css/create.css">
+  <title>Création du Roi</title>
 </head>
 <body>
-    <h1>Créer votre souverain</h1>
-    
-        <label for="name">Nom du souverain</label>
-        <input type="text" id="name" name="user_name" />
-        <form id="choice">
-            <ul>
-              <li>
-                <label>
-                  <input type="radio" name="selectedImage" value="item1" checked>
-                  <img src="./image/amulettederichesse.png" alt="Image 1">
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="selectedImage" value="item2">
-                  <img src="./image/artefactsacree.png" alt="Image 2">
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="selectedImage" value="item3">
-                  <img src="./image/talismanbeni.png" alt="Image 3">
-                </label>
-              </li>
-            </ul>
-            
-           
-            
-          </form>
-          <input type="submit" value="Sélectionner" id="button">
+  <div class="background">
+    <div class="ChoicePlayer">
+      <div class="title">
+        <h1>Créer votre souverain</h1>
+      </div>
+      
+
+      <label for="name">Nom du souverain</label>
+      <input type="text" id="name" name="user_name" />
+      <form id="choice">
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="selectedImage" value="item1" checked>
+              <img src="./image/amulettederichesse.png" alt="Image 1">
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="selectedImage" value="item2">
+              <img src="./image/artefactsacree.png" alt="Image 2">
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="selectedImage" value="item3">
+              <img src="./image/talismanbeni.png" alt="Image 3">
+            </label>
+          </li>
+        </ul>
+      </form>
+      <input type="submit" value="Sélectionner" id="button">
+    </div>
+
+  </div>
 </body>
 <script src="./js/player.js"></script>
 <script src="./js/create.js"></script>
+
 </html>
