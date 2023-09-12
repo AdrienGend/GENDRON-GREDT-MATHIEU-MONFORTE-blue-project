@@ -40,4 +40,4 @@ function printPlayerStats() {
 
 
 
-printPlayerStats();
+
