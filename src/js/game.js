@@ -3,6 +3,7 @@ let army = document.querySelector("#military");
 let gold = document.querySelector("#gold");
 let faith = document.querySelector("#faith");
 let population = document.querySelector("#population");
+let itemStockage = document.querySelector(".Item");
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -56,8 +57,21 @@ function displayPopulation() {
     population.innerHTML = player._population;
 }
 
+function displayInventory() {
+    let player = getPlayer();
+    itemStockage.innerHTML = "";
+    let inventory = player.inventory;
+    for (let i = 0; i < inventory.length ; i++) {
+        itemImage = inventory[i].image;
+        console.log(inventory[i].name);
+        itemStockage.innerHTML += `<img src="./image/amulettederichesse.png" alt="item">`
+    }
+}
+
+
 displayPseudo();
 displayGold();
 displayFaith();
 displayArmy();
 displayPopulation();
+displayInventory();

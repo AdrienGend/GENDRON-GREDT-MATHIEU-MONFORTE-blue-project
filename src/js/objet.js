@@ -54,14 +54,14 @@ const item8 = new Item("Bouclier Divin", "Augmente le pouvoir militaire de 10.",
 });"./image/bouclier.png"
 
 
-console.log(item1);
-console.log(item2);
-console.log(item3);
-console.log(item4);
-console.log(item5);
-console.log(item6);
-console.log(item7);
-console.log(item8);
-player.addItem(item1);
-player.printPlayerStats();
+//console.log(item1);
+//console.log(item2);
+//console.log(item3);
+//console.log(item4);
+//console.log(item5);
+//console.log(item6);
+//console.log(item7);
+//console.log(item8);
+//player.addItem(item1);
+//player.printPlayerStats();
 

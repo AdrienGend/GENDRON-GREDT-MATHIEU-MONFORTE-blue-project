@@ -9,8 +9,15 @@ function initialize() {
     let playerName = nameValue.value; 
     let player = new Player(playerName, 50, 50, 50, 50, []);
 
+    console.log(item1);
     console.log(choice);
-    player.addItem(choice);
+    if (choice === "item1") {
+        player.addItem(item1);
+    } else if (choice === "item2") {
+        player.addItem(item2);
+    } else if (choice === "item3") {
+        player.addItem(item3);
+    }
     console.log(player);
     player = JSON.stringify(player);
     console.log(player);
