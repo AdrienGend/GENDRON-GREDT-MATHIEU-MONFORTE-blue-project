@@ -1,6 +1,6 @@
-localStorage.setItem("foi", "100")
+localStorage.setItem("foi", "10")
 localStorage.setItem("or", "10")
-localStorage.setItem("bonheur", "10")
+localStorage.setItem("bonheur", "0")
 localStorage.setItem("militaire", "10")
 
 var foi = localStorage.getItem('foi');
@@ -22,7 +22,7 @@ if (or == 0){
 }
 
 if (bonheur == 0){
-    document.querySelector('p').textContent = 'Votre peuple vous a renverser et trucidé.';
+    document.querySelector('p').textContent = 'Votre peuple a faim, ils vous a renverser et trucidé.';
     background.style.backgroundImage = "url('./image/fin-famine.png')";
 }
 
