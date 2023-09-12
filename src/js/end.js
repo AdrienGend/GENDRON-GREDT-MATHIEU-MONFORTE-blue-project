@@ -29,7 +29,6 @@ if (bonheur == 0){
 if (militaire == 0){
     document.querySelector('p').textContent = 'Votre armée est trop faible pour faire respecter la loi. Des bandits font la loi dans votre royaume.';
     background.style.backgroundImage = "url('./image/fin-militaire0.png')";
-    
 }
 
 if (foi == 100){
