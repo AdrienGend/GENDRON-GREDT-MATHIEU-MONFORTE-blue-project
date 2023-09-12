@@ -10,15 +10,31 @@
     
         <label for="name">Nom du souverain</label>
         <input type="text" id="name" name="user_name" />
-        <ul>
-            <li>1 objet</li>
-            <li>2 objet</li>
-            <li>3 objet</li>
-        </ul>
-        
-        <div class="button">
-            <button type="submit" id="button">Envoyer le message</button>
-        </div>
+        <form>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="selectedImage" value="image1.jpg">
+                  <img src="image1.jpg" alt="Image 1">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="selectedImage" value="image2.jpg">
+                  <img src="image2.jpg" alt="Image 2">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="selectedImage" value="image3.jpg">
+                  <img src="image3.jpg" alt="Image 3">
+                </label>
+              </li>
+            </ul>
+            
+           
+            <input type="submit" value="Sélectionner" id="button">
+          </form>
 </body>
 <script src="./js/player.js"></script>
 <script src="./js/create.js"></script>

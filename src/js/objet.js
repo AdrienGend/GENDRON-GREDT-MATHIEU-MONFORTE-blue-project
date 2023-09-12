@@ -1,24 +1,23 @@
 class Item {
-  constructor(name, description, price , effect) {
+  constructor(name, description, price , effect, image) {
     this.name = name;
     this.description = description;
     this.price = price;
     this.effect = effect;
+    this.image = image;
   }
 }
-
-const player = new Player("Player", 100, 100, 100, 100, []);
 
 // Création des objets
 
 // Objet 1 : augmente l'or de base du joueur lorsqu'il est utilisé.
 const item1 = new Item("Amulette de richesse", "Augmente l'or de base du joueur", 0, () => {
-  player.changeGold(10);
+  player.changeGold(10);"./image/amulettederichesse.png";
 });
 
 // Objet 2 : augmente le niveau de foi de base du joueur.
 const item2 = new Item("Relique sacrée", "Augmente le niveau de foi de base du joueur", 0, () => {
-    player.changeFaith(10);
+    player.changeFaith(10);"./image/reliquesacree.png";
 });
 
 // Objet 3 : augmente légèrement l'or et le niveau de foi de base du joueur.
