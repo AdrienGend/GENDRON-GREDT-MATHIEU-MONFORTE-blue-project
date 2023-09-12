@@ -27,10 +27,14 @@ class Player {
         this.inventary.push(item);
     }
 
+     printPlayerStats() {
+        console.log(this.name);
+        console.log(this.gold);
+        console.log(this.faith);
+        console.log(this.army);
+        console.log(this.population);
+    }
 }
-
-const player = new Player('Player', 100, 100, 100, 100, []);
-
 
 
 // Print player stats
@@ -41,7 +45,6 @@ function printPlayerStats() {
     console.log(player.army);
     console.log(player.population);
 }
-
 
 
 
