@@ -1,0 +1,80 @@
+.WithOutHeader {
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    background-image: url("../image/chateauSombre.jpg");
+}
+
+.Right, .Left{
+    height: 100%;
+    width: 50%;
+}
+
+.Right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Backpack {
+    height: 125px;
+    width: 125px;
+    margin: 15px 30px 0px 0px;
+}
+
+.Backpack img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.Dropdown {
+    margin: 15px 30px 0px 0px;
+    background-color: #2b2b2b; /* Fond sombre */
+    border: 2px solid #5a5a5a; /* Bordure plus foncée */
+    width: 300px;
+    height: 300px;
+    display: none;
+    padding: 15px;
+    color: #fff; /* Texte en blanc */
+    font-family: 'Uncial Antiqua', serif; /* Police médiévale, vous devrez inclure cette police dans votre projet */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Ombre légère */
+    border-radius: 15px; /* Coins arrondis */
+}
+
+.CloseButton {
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 30px; /* Ajustez la taille de la croix ici */
+    line-height: 1; /* Pour centrer la croix verticalement */
+    color: #fff; /* Couleur de la croix en blanc */
+}
+
+.Item {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    gap: 10px; /* Espacement entre les images */
+}
+
+.Item img {
+    height: 45%; /* Légèrement plus grand pour une meilleure visibilité */
+    width: 45%;
+    border: 3px solid #fff; /* Bordure blanche autour des images */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Style des images au survol (facultatif) */
+.Item img:hover {
+    border-color: #ffcc00; /* Couleur de la bordure au survol */
+    transform: scale(1.1); /* Légèrement agrandi au survol */
+    transition: all 0.3s ease; /* Transition en douceur */
+}
+
+
+
+

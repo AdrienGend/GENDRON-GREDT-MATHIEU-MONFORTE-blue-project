@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <link type="text/css" rel="stylesheet" href="css/game.css">
+    <link type="text/css" rel="stylesheet" href="css/header.css">
+    <title>Partie de "nom du joueur"</title>
 </head>
+
 <body>
+    <div class="header">
+        <div class="PlayerInfo">
+            <h1>Nom du joueur</h1>
+            <h1>nombre de jour</h1>
+        </div>
+        <div class="RessourcesInfo">
+            <div class="ressource">
+                <div class="selection">
+                    <img src="image/Or.png">
+                </div>
+                <div class="selection ">
+                    <img src="image/Foi.png">
+                </div>
+                <div class="selection">
+                    <img src="image/Bonheur.png">
+                </div>
+                <div class="selection">
+                    <img src="image/Militaire.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="WithOutHeader">
+        <div class="Left">
+
+        </div>
+        <div class="Right">
+            <div class="Backpack" id="backpack">
+                <img src="image/Sac-a-dos.png">
+            </div>
+            <div class="Dropdown" id="dropdown">
+                <!-- Contenu du dropdown ici -->
+                <p class="CloseButton" id="closeButton">&times;</p>
+                <div class="Item">
+                    <img src="image/amulettederichesse.png">
+                    <img src="image/amuletteevasion.png">
+                    <img src="image/artefactsacree.png">
+                    <img src="image/bouclier.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
     <script src="js/player.js"></script>
     <script src="js/objet.js"></script>
 </body>
+
 </html>
