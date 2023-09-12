@@ -24,7 +24,7 @@ body {
     text-decoration: none;
     text-align: center;
     font-size: 30px;
-    color: rgb(213, 251, 254);
+    color: rgb(247, 232, 166);
     margin-bottom: 50px;
 }
 
@@ -34,8 +34,8 @@ body {
     font-size: large;
     width: 200px;
     font-size: 60px;
-    color: rgb(12, 41, 52);
-    background-color: rgb(55, 99, 103);
+    color: rgb(53, 117, 110);
+    background-color: rgb(253, 235, 168);
     padding: 7px;
     border-radius: 33px;
     box-shadow: 10px 5px 5px rgb(74, 147, 130);
@@ -47,8 +47,8 @@ body {
 .button:hover{
     background-color: white;
     box-shadow: 10px 5px 5px rgb(21, 64, 118);
-    background-color: rgb(2, 5, 16);
-    color: rgb(254, 250, 242);
+    background-color: rgb(237, 152, 46);
+    color: rgb(53, 117, 110);
 
 }
 
