@@ -13,10 +13,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: flex-end;
     align-items: center;
     background-image: url("../image/chateau.png");
-    
     background-repeat: no-repeat;
     z-index: 2;
 }
@@ -26,8 +25,7 @@ body {
     text-align: center;
     font-size: 30px;
     color: rgb(213, 251, 254);
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .button{
@@ -43,6 +41,7 @@ body {
     box-shadow: 10px 5px 5px rgb(74, 147, 130);
     z-index: 1;
     transition: all 0.5s;
+    margin-bottom: 75px;
 }
 
 .button:hover{
