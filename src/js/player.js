@@ -1,10 +1,11 @@
 class Player {
-    constructor(name, gold, faith, army, population) {
+    constructor(name, gold, faith, army, population, inventary) {
         this.name = name;
         this.gold = gold;
         this.faith = faith;
         this.army = army;
         this.population = population;
+        this.inventary = inventary;
     }
     //methods
     changeGold(amount) {
@@ -22,10 +23,13 @@ class Player {
     changeName(name) {
         this.name = name;
     }
+    addItem(item) {
+        this.inventary.push(item);
+    }
 
 }
 
-const player = new Player('Player', 100, 100, 100, 100);
+const player = new Player('Player', 100, 100, 100, 100, []);
 
 
 
