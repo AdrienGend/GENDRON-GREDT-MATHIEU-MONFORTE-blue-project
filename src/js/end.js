@@ -1,6 +1,6 @@
-localStorage.setItem("foi", "100")
+localStorage.setItem("foi", "10")
 localStorage.setItem("or", "10")
-localStorage.setItem("bonheur", "10")
+localStorage.setItem("bonheur", "100")
 localStorage.setItem("militaire", "10")
 
 var foi = localStorage.getItem('foi');
