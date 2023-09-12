@@ -11,18 +11,47 @@ body {
 .header {
     height: 100px;
     width: 100%;
-    background-color: red;
+    background-color: #585454;
     display: flex;
 }
 
 .PlayerInfo {
+    font-size: 15px;
+    color: white;
     height: 100%;
     width: 30%;
-    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .RessourcesInfo {
     height: 100%;
     width: 70%;
-    background-color: blue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ressource {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selection {
+    color: white;
+    height: 50px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    border-radius: 33px;
+    background-color: rgb(31, 31, 32);
+}
+
+img {
+    height: 50px;
+    width: 50px;
 }

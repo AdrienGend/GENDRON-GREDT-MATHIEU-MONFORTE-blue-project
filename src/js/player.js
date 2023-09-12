@@ -1,11 +1,11 @@
 class Player {
-    constructor(name, gold, faith, army, population, inventary) {
+    constructor(name, gold, faith, army, population, inventory) {
         this.name = name;
         this.gold = gold;
         this.faith = faith;
         this.army = army;
         this.population = population;
-        this.inventary = inventary;
+        this.inventory = inventory;
     }
     //methods
     changeGold(amount) {
@@ -24,27 +24,30 @@ class Player {
         this.name = name;
     }
     addItem(item) {
-        this.inventary.push(item);
+        this.inventory.push(item);
     }
 
-     printPlayerStats() {
-        console.log(this.name);
-        console.log(this.gold);
-        console.log(this.faith);
-        console.log(this.army);
-        console.log(this.population);
+    printPlayerStats() {
+    console.log(this.name);
+    console.log(this.gold);
+    console.log(this.faith);
+    console.log(this.army);
+    console.log(this.population);
+    console.log(this.inventory);
+    }
+    //setters
+    set name(name) {
+        this._name = name;
+    }
+    //getters
+    get name() {
+        return this._name;
     }
 }
 
 
-// Print player stats
-function printPlayerStats() {
-    console.log(player.name);
-    console.log(player.gold);
-    console.log(player.faith);
-    console.log(player.army);
-    console.log(player.population);
-}
+
+
 
 
 

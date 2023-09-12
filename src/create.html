@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer</title>
+</head>
+<body>
+    <h1>Créer votre souverain</h1>
+    
+        <label for="name">Nom du souverain</label>
+        <input type="text" id="name" name="user_name" />
+        <form>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="selectedImage" value="image1.jpg">
+                  <img src="image1.jpg" alt="Image 1">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="selectedImage" value="image2.jpg">
+                  <img src="image2.jpg" alt="Image 2">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="selectedImage" value="image3.jpg">
+                  <img src="image3.jpg" alt="Image 3">
+                </label>
+              </li>
+            </ul>
+            
+           
+            <input type="submit" value="Sélectionner" id="button">
+          </form>
+</body>
+<script src="./js/player.js"></script>
+<script src="./js/create.js"></script>
+</html>
