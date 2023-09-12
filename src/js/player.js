@@ -27,24 +27,26 @@ class Player {
         this.inventary.push(item);
     }
 
-     printPlayerStats() {
-        console.log(this.name);
-        console.log(this.gold);
-        console.log(this.faith);
-        console.log(this.army);
-        console.log(this.population);
+    printPlayerStats() {
+    console.log(this.name);
+    console.log(this.gold);
+    console.log(this.faith);
+    console.log(this.army);
+    console.log(this.population);
+    }
+    //setters
+    set name(name) {
+        this._name = name;
+    }
+    //getters
+    get name() {
+        return this._name;
     }
 }
 
 
-// Print player stats
-function printPlayerStats() {
-    console.log(player.name);
-    console.log(player.gold);
-    console.log(player.faith);
-    console.log(player.army);
-    console.log(player.population);
-}
+
+
 
 
 
