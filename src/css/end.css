@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'black knight';
+    src: url(../black-knight-kong-font/Black\ Knight.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'black knight', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("../image/fin-heureuse.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.fin{
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(14, 15, 19);
+    margin-bottom: 50px;
+}
