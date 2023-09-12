@@ -1,11 +1,11 @@
 class Player {
-    constructor(name, gold, faith, army, population, inventary) {
+    constructor(name, gold, faith, army, population, inventory) {
         this.name = name;
         this.gold = gold;
         this.faith = faith;
         this.army = army;
         this.population = population;
-        this.inventary = inventary;
+        this.inventory = inventory;
     }
     //methods
     changeGold(amount) {
@@ -24,7 +24,7 @@ class Player {
         this.name = name;
     }
     addItem(item) {
-        this.inventary.push(item);
+        this.inventory.push(item);
     }
 
     printPlayerStats() {
@@ -33,6 +33,7 @@ class Player {
     console.log(this.faith);
     console.log(this.army);
     console.log(this.population);
+    console.log(this.inventory);
     }
     //setters
     set name(name) {
