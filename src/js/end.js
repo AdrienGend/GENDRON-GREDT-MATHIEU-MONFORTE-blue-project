@@ -1,7 +1,7 @@
 localStorage.setItem("foi", "10")
 localStorage.setItem("or", "10")
 localStorage.setItem("bonheur", "10")
-localStorage.setItem("militaire", "10")
+localStorage.setItem("militaire", "0")
 
 var foi = localStorage.getItem('foi');
 var or = localStorage.getItem('or');
@@ -29,7 +29,7 @@ if (bonheur == 0){
 if (militaire == 0){
     document.querySelector('p').textContent = 'Votre armée est trop faible pour faire respecter la loi. Des bandits font la loi dans votre royaume.';
     background.style.backgroundImage = "url('./image/fin-militaire0.png')";
-    p.style.color = "white";
+    
 }
 
 if (foi == 100){
@@ -43,7 +43,7 @@ if (or == 100){
 }
 
 if (bonheur == 100){
-    document.querySelector('p').textContent = 'Lors de la fête du royaume, une charette vous a écrasez.';
+    document.querySelector('p').textContent = 'Lors de la fête du royaume, vous avez été empoisonnée.';
     background.style.backgroundImage = "url('./image/fin-bonheur100.png')";
 }
 
