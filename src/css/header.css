@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+}
+
+.PlayerInfo {
+    height: 100%;
+    width: 30%;
+    background-color: black;
+}
+
+.RessourcesInfo {
+    height: 100%;
+    width: 70%;
+    background-color: blue;
+}
