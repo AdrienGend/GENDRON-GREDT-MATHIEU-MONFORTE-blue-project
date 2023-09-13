@@ -13,8 +13,13 @@ Pour lancer le jeu, ouvrez la page start puis suivez les instructions.
 
 ## L'Arborescence
 
-Dans la racine, on retrouve le README.md, la répartition des tâches ainsi que le dossier [src](C:\Users\pierr\Documents\. Ynov\Forum\GENDRON-GREDT-MATHIEU-MONFORTE-ProjetBlue\src) qui regroupe tout les dossiers et fichiers du jeu.
+Dans la racine, on retrouve le README.md, la répartition des tâches ainsi que le dossier [src](src) qui regroupe tout les dossiers et fichiers du jeu.
 
-Dans le dossier [src](C:\Users\pierr\Documents\. Ynov\Forum\GENDRON-GREDT-MATHIEU-MONFORTE-ProjetBlue\src), on retrouve :
+Dans le dossier [src](src), on retrouve :
 
-* On retrouve le dossier de la police du jeu : [Black Knight Kong font](C:\Users\pierr\Documents\. Ynov\Forum\GENDRON-GREDT-MATHIEU-MONFORTE-ProjetBlue\src\black-knight-kong-font)
+* On retrouve le dossier de la police du jeu : [Black Knight Kong font](src\black-knight-kong-font)
+* Ensuite on a le dossier [css](src\css) :
+
+    On a le fichier[create.css](src\css\create.css) qui contient tout le css de la page de création.
+
+    On a le fichier[end.css](src\css\end.css) qui contient tout le css de la page de fin .
