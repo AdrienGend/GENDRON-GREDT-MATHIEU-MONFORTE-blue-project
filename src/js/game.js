@@ -75,3 +75,4 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
+
