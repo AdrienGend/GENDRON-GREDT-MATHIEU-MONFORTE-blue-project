@@ -400,8 +400,4 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
-<<<<<<< HEAD
 displayMarchandAvatar();
-=======
-Getfromjson();
->>>>>>> f361aed96cb4cc07b0527b570187bdb0198b55ca
