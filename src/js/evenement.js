@@ -14,8 +14,7 @@ class Events {
 }
 
 
-
-
+event1 = new Events("L'Epidémi Mortelle", "Une épidémie mortelle sévit dans le village.", "Le Pape bénit le village pour guérir la maladie", "Le Conseiller organise une quarantaine stricte",() => {player.changeFaith(20),player.changePopulation(-10)},() => {player.changeArmy(20),player.changePopulation(-10)} , "Pape");
 
 
 

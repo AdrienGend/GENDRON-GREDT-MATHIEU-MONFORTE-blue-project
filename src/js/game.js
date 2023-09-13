@@ -405,7 +405,7 @@ function displayMarchandAvatar() {
     "<div class=" + "ItemShop" + ">Objets Vendable</div>";
     rightDiv.appendChild(rightButton);
 }
-// instance des événements
+
 //let event1 = new Event(1, "L'Épidémie Mortelle", "Une épidémie mortelle sévit dans le village.", "Le Pape bénit le village pour guérir la maladie", "Le Conseiller organise une quarantaine stricte",{}, { }, "Pape");
 //appel des fonctions
 displayPseudo();
@@ -414,5 +414,5 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
-displayMarchandAvatar();
+//displayMarchandAvatar();
 
