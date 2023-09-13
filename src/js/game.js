@@ -392,6 +392,7 @@ function displayMarchandAvatar() {
     let rightButton = document.createElement("div");
     rightButton.classList.add("SpecialMarchandVendre")
     rightButton.innerHTML = "<div class=" + "TitleShop" + ">Objets Vendable</div>"
+    "<div class=" + "ItemShop" + ">Objets Vendable</div>";
     rightDiv.appendChild(rightButton);
 }
 
