@@ -18,8 +18,15 @@ Dans la racine, on retrouve le README.md, la répartition des tâches ainsi que 
 Dans le dossier [src](src), on retrouve :
 
 * On retrouve le dossier de la police du jeu : [Black Knight Kong font](src\black-knight-kong-font)
+* On retrouve toutes les pages de html du jeu.
 * Ensuite on a le dossier [css](src\css) :
 
-    On a le fichier[create.css](src\css\create.css) qui contient tout le css de la page de création.
+    On a le fichier[create.css](src\css\create.css) qui contient tout le css de la page [create.html](src\create.html).
 
-    On a le fichier[end.css](src\css\end.css) qui contient tout le css de la page de fin .
+    On a le fichier[end.css](src\css\end.css) qui contient tout le css de la page [end.html](src\end.html).
+
+    On a le fichier[game.css](src\css\game.css) qui contient tout le css de la page [game.html](src\game.html).
+
+    On a le fichier[header.css](src\css\header.css) qui contient tout le css du header.
+
+    On a le fichier[start.css](src\css\start.css) qui contient tout le css de la page [start.html](src\start.html).
