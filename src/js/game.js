@@ -335,6 +335,25 @@ function displayAdvisorAvatar() {
     rightButton.textContent = "Bouton Droite";
     rightDiv.appendChild(rightButton);
 }
+  
+function Getfromjson() {
+    // Chargement des événements à partir du fichier JSON (assurez-vous de charger le fichier JSON correctement)
+fetch('./json/event.json')
+.then(response => {
+  if (!response.ok) {
+    throw new Error('La récupération du fichier a échoué');
+  }
+  return response.json(); // Convertir la réponse en JSON
+})
+.then(data => {
+  // Utiliser les données JSON ici
+  console.log(data);
+})
+.catch(error => {
+  console.error('Une erreur s\'est produite :', error);
+});
+
+}
 
 //appel des fonctions
 displayPseudo();
@@ -343,3 +362,4 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
+Getfromjson();
