@@ -324,8 +324,8 @@ function displayAndUseEvent(event) {
     description.innerHTML = event._description;
     buttonLeft.innerHTML = event._choice1;
     buttonRight.innerHTML = event._choice2;
-    buttonLeft.addEventListener("click", () => {event.effect1(player),displayStats(),lancerEvenementAleatoire()});
-    buttonRight.addEventListener("click", () => {event.effect2(player),displayStats(),lancerEvenementAleatoire()});
+    buttonLeft.addEventListener("click", () => {event.effect1(player),displayStats(),endGame()});
+    buttonRight.addEventListener("click", () => {event.effect2(player),displayStats(),endGame()});
     console.log(player);
 }
   
@@ -365,6 +365,49 @@ for (let i = 1; i <= 15; i++) {
     console.log(`Événement ${evenementId} déclenché.`);
     // Ajoutez ici le code que vous souhaitez exécuter lorsque l'événement est déclenché.
   });
+}
+
+function endGame() {
+    console.log("endGame");
+    let end
+    if (player._faith <= 0){
+        end = 1;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+    }else if (player._gold <= 0){
+        end = 2;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+    }else if (player._population <= 0){
+        end = 3;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+    }else if (player._army <= 0){
+        end = 4;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+    }else if (player._faith >= 100){
+        end = 5;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+
+    }else if (player._gold >= 100){
+        end = 6;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+    }else if (player._population >= 100){
+        end = 7;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+    }else if (player._army >= 100){
+        end = 8;
+        localStorage.setItem("end", end);
+        window.location.href = "end.html";
+    }else{
+        lancerEvenementAleatoire();
+    }
+    
+
 }
 
   
