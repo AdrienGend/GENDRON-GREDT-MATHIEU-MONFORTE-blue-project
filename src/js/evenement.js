@@ -1,3 +1,29 @@
+class Events {
+    constructor(id, title, description, choice1,choice2,effect1,effect2, personnage) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.choice1 = choice1;
+        this.choice2 = choice2;
+        this.effect1 = effect1;
+        this.effect2 = effect2;
+        this.personnage = personnage;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 const events = [
     {
         title: "L'Épidémie Mortelle",

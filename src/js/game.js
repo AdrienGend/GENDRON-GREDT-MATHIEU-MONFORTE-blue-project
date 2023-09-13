@@ -5,6 +5,12 @@ let faith = document.querySelector("#faith");
 let population = document.querySelector("#population");
 let itemStockage = document.querySelector(".Item");
 let background = document.querySelector(".WithOutHeader");
+let player = getPlayer();
+
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -29,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
 function getPlayer() {
     let player = localStorage.getItem("player");
     player = JSON.parse(player);
+    console.log(player);
     return player;
+    
 }
 function getNote() {
     let note = localStorage.getItem("note");
@@ -52,32 +60,32 @@ function displayBackground() {
 }
 
 function displayPseudo() {
-    let player = getPlayer();
+    
     pseudo.innerHTML = player._name;
 }
 
 function displayGold() {
-    let player = getPlayer();
+    
     gold.innerHTML = player._gold;
 }
 
 function displayFaith() {
-    let player = getPlayer();
+   
     faith.innerHTML = player._faith;
 }
 
 function displayArmy() {
-    let player = getPlayer();
+    
     army.innerHTML = player._army;
 }
 
 function displayPopulation() {
-    let player = getPlayer();
+   
     population.innerHTML = player._population;
 }
 
 function displayInventory() {
-    let player = getPlayer();
+    
     itemStockage.innerHTML = "";
     let inventory = player.inventory;
     for (let i = 0; i < inventory.length; i++) {
@@ -86,6 +94,8 @@ function displayInventory() {
         itemStockage.innerHTML += `<img src="${itemImage}" alt="item">`
     }
 }
+
+
 
 displayBackground();
 //function affichage Mage
@@ -394,7 +404,8 @@ function displayMarchandAvatar() {
     rightButton.innerHTML = "<div class=" + "TitleShop" + ">Objets Vendable</div>"
     rightDiv.appendChild(rightButton);
 }
-
+// instance des événements
+//let event1 = new Event(1, "L'Épidémie Mortelle", "Une épidémie mortelle sévit dans le village.", "Le Pape bénit le village pour guérir la maladie", "Le Conseiller organise une quarantaine stricte",{}, { }, "Pape");
 //appel des fonctions
 displayPseudo();
 displayGold();
@@ -403,3 +414,4 @@ displayArmy();
 displayPopulation();
 displayInventory();
 displayMarchandAvatar();
+

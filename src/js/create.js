@@ -18,7 +18,7 @@ function initialize() {
         playerName = "Joueur";
     }
     let player = new Player(playerName, 50, 50, 50, 50, []);
-
+    
     console.log(item1);
     console.log(choice);
     if (choice === "item1") {
