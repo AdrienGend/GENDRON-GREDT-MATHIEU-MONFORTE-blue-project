@@ -44,9 +44,9 @@ function displayBackground() {
     let note = getNote();
     if (note > 1) {
         background.style.backgroundImage = "url('./image/chateauGentil.jpg')";
-    }else if (note < -1) {
+    } else if (note < -1) {
         background.style.backgroundImage = "url('./image/chateauSombre.jpg')";
-    }else {
+    } else {
         background.style.backgroundImage = "url('./image/SalleDuTrone.png')";
     }
 }
@@ -335,23 +335,23 @@ function displayAdvisorAvatar() {
     rightButton.textContent = "Bouton Droite";
     rightDiv.appendChild(rightButton);
 }
-  
+
 function Getfromjson() {
     // Chargement des événements à partir du fichier JSON (assurez-vous de charger le fichier JSON correctement)
-fetch('./json/event.json')
-.then(response => {
-  if (!response.ok) {
-    throw new Error('La récupération du fichier a échoué');
-  }
-  return response.json(); // Convertir la réponse en JSON
-})
-.then(data => {
-  // Utiliser les données JSON ici
-  console.log(data);
-})
-.catch(error => {
-  console.error('Une erreur s\'est produite :', error);
-});
+    fetch('./json/event.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('La récupération du fichier a échoué');
+            }
+            return response.json(); // Convertir la réponse en JSON
+        })
+        .then(data => {
+            // Utiliser les données JSON ici
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Une erreur s\'est produite :', error);
+        });
 
 }
 
@@ -383,13 +383,15 @@ function displayMarchandAvatar() {
     // Ajouter un bouton dans la div "Left"
     let leftDiv = document.querySelector(".Left");
     let leftButton = document.createElement("button");
-    leftButton.textContent = "Bouton Gauche";
+    leftButton.classList.add("SpecialMarchandAcheter")
+    leftButton.innerHTML = "<div class=" + "TitleShop" + ">Objets Achetable</div>";
     leftDiv.appendChild(leftButton);
 
     // Ajouter un bouton dans la div "Right"
     let rightDiv = document.querySelector(".Right");
     let rightButton = document.createElement("button");
-    rightButton.textContent = "Bouton Droite";
+    rightButton.classList.add("SpecialMarchandVendre")
+    rightButton.innerHTML = "<div class=" + "TitleShop" + ">Objets Vendable</div>"
     rightDiv.appendChild(rightButton);
 }
 

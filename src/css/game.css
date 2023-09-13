@@ -151,4 +151,22 @@ button {
 /* spécial css pour le Marchand */
 
 
+.SpecialMarchandAcheter, .SpecialMarchandVendre {
+    height: 450px;
+    width: 400px;
+    background-color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
 
+}
+
+/* Coté Achetable */
+.TitleShop {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+}
