@@ -326,4 +326,3 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
-displayAdvisorAvatar();

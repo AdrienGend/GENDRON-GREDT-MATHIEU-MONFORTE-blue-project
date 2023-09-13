@@ -1,6 +1,19 @@
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Définissez une fonction pour vérifier si un événement de marchand doit être déclenché
+function shouldTriggerMerchantEvent(totalEvents) {
+    // Générez un nombre aléatoire entre 1 et totalEvents
+    const randomEvent = getRandomInt(1, totalEvents);
+    // Si le nombre généré est inférieur ou égal à 5 (par exemple), déclenchez l'événement marchand
+    // Vous pouvez ajuster ce chiffre selon vos besoins pour contrôler la fréquence des événements marchands.
+    return randomEvent <= 5; // Dans cet exemple, 5 est la fréquence d'apparition du marchand.
+}
+
 // Créez une fonction pour gérer l'événement Marchand
-function handleMerchantEvent(totalEvents) {
-    if (shouldTriggerMerchantEvent(totalEvents)) {
+function handleMerchantEvent(player, items) {
+    if (shouldTriggerMerchantEvent(player.totalEvents)) {
         console.log("Un marchand itinérant apparaît !");
         console.log("Objets à vendre :");
 
@@ -10,10 +23,10 @@ function handleMerchantEvent(totalEvents) {
         }
 
         // Permettez au joueur d'acheter des objets
-        const choixAchat = 0; // Remplacez cela par l'entrée du joueur
+        const choixAchat = parseInt(prompt("Choisissez un objet à acheter (entrez le numéro) :"));
 
-        if (choixAchat >= 0 && choixAchat < items.length) {
-            const itemAchat = items[choixAchat];
+        if (!isNaN(choixAchat) && choixAchat >= 1 && choixAchat <= items.length) {
+            const itemAchat = items[choixAchat - 1];
 
             if (player.gold >= itemAchat.price) {
                 console.log(`Vous avez acheté ${itemAchat.name} pour ${itemAchat.price} pièces d'or.`);
@@ -28,6 +41,41 @@ function handleMerchantEvent(totalEvents) {
     }
 }
 
+// Créez une fonction pour gérer l'événement de vente du marchand
+function handleSellEvent(player, items) {
+    console.log("Le marchand propose d'acheter vos objets !");
+    console.log("Objets à vendre :");
+
+    // Affichez les objets dans l'inventaire du joueur
+    for (let i = 0; i < player.inventory.length; i++) {
+        console.log(`${i + 1}. ${player.inventory[i].name} - Valeur: ${player.inventory[i].price} pièces d'or`);
+    }
+
+    // Permettez au joueur de choisir un objet à vendre
+    const choixVente = parseInt(prompt("Choisissez un objet à vendre (entrez le numéro) :"));
+
+    if (!isNaN(choixVente) && choixVente >= 1 && choixVente <= player.inventory.length) {
+        const itemVente = player.inventory[choixVente - 1];
+
+        console.log(`Vous vendez ${itemVente.name} pour ${itemVente.price} pièces d'or.`);
+        player.gold += itemVente.price;
+        player.removeItem(itemVente); // Supprimez l'objet de l'inventaire du joueur
+    } else {
+        console.log("Choix invalide.");
+    }
+}
+
+// Utilisez les objets dans votre tableau "items"
+const items = [
+    item4,
+    item5,
+    item6,
+    item7,
+    item8,
+    // Ajoutez d'autres objets du fichier "objet.js" ici
+];
+
+console.log(items);
+
 // Utilisez la fonction pour gérer l'événement Marchand
-const totalEvents = 15; // Remplacez cela par le nombre total d'événements dans votre jeu
-handleMerchantEvent(totalEvents);
+handleMerchantEvent(Player, Item);
