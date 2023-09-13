@@ -41,6 +41,30 @@ function handleMerchantEvent(player, items) {
     }
 }
 
+// Créez une fonction pour gérer l'événement de vente du marchand
+function handleSellEvent(player, items) {
+    console.log("Le marchand propose d'acheter vos objets !");
+    console.log("Objets à vendre :");
+
+    // Affichez les objets dans l'inventaire du joueur
+    for (let i = 0; i < player.inventory.length; i++) {
+        console.log(`${i + 1}. ${player.inventory[i].name} - Valeur: ${player.inventory[i].price} pièces d'or`);
+    }
+
+    // Permettez au joueur de choisir un objet à vendre
+    const choixVente = parseInt(prompt("Choisissez un objet à vendre (entrez le numéro) :"));
+
+    if (!isNaN(choixVente) && choixVente >= 1 && choixVente <= player.inventory.length) {
+        const itemVente = player.inventory[choixVente - 1];
+
+        console.log(`Vous vendez ${itemVente.name} pour ${itemVente.price} pièces d'or.`);
+        player.gold += itemVente.price;
+        player.removeItem(itemVente); // Supprimez l'objet de l'inventaire du joueur
+    } else {
+        console.log("Choix invalide.");
+    }
+}
+
 // Utilisez les objets dans votre tableau "items"
 const items = [
     item4,
@@ -50,6 +74,8 @@ const items = [
     item8,
     // Ajoutez d'autres objets du fichier "objet.js" ici
 ];
+
+console.log(items);
 
 // Utilisez la fonction pour gérer l'événement Marchand
 handleMerchantEvent(Player, Item);
