@@ -6,7 +6,9 @@ class Item {
     this.effect = effect;
     this.image = image;
   }
-  
+    use(player) {
+        this.effect(player);
+    }
 }
 
 // Création des objets

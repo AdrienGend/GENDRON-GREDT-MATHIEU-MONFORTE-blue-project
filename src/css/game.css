@@ -7,17 +7,58 @@
     background-repeat: no-repeat;
 }
 
-.Right, .Left{
+.Right, .Left, .center{
     height: 100%;
-    width: 50%;
+    width: 33.3%;
 }
 
-.Right {
+.center {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
 }
 
+.character-container {
+    position: relative;
+    text-align: center;
+}
+
+.character-container img.gauche {
+    float: left;
+    clear: both;
+    transform: translateY(20%);
+}
+
+.character-container img.droite {
+    float: right;
+    clear: both;
+    transform: translateY(20%);
+}
+
+
+.center img {
+    height: 80%;
+    width: 40%;
+    z-index: 99;
+}
+
+.Right {
+    position: relative; /* Ajoutez ceci pour que .Backpack soit positionné par rapport à .Right */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .Backpack {
+    position: absolute;
+    top: 0; /* Positionnez-le au coin supérieur droit de .Right */
+    right: 0;
     height: 125px;
     width: 125px;
     margin: 15px 30px 0px 0px;
@@ -60,21 +101,47 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
-    gap: 10px; /* Espacement entre les images */
+    gap: 10px;
 }
 
 .Item img {
-    height: 45%; /* Légèrement plus grand pour une meilleure visibilité */
+    height: 45%;
     width: 45%;
-    border: 3px solid #fff; /* Bordure blanche autour des images */
-    border-radius: 10px; /* Coins arrondis */
+    border: 3px solid #fff; 
+    border-radius: 10px; 
 }
 
-/* Style des images au survol (facultatif) */
+
 .Item img:hover {
-    border-color: #ffcc00; /* Couleur de la bordure au survol */
-    transform: scale(1.1); /* Légèrement agrandi au survol */
-    transition: all 0.3s ease; /* Transition en douceur */
+    border-color: #ffcc00; 
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.dialog-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 33px;
+    padding: 10px;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: -100px; /* Positionnement au-dessus du personnage */
+    left: 55%;
+    transform: translateX(-50%); /* Centrer horizontalement */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-text p {
+    margin: 0;
+    font-size: 16px;
+}
+
+button {
+    margin-bottom: 150px;
+    height: 100px;
+    width: 400px;
+    border-radius: 30px;
 }
 
 
