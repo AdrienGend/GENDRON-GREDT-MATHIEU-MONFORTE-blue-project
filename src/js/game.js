@@ -130,6 +130,18 @@ function displayMageAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 
@@ -157,6 +169,18 @@ function displayArcherAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 //function affichage Paysan 
@@ -183,6 +207,18 @@ function displayPeasantAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 //function affichage refugier
@@ -209,6 +245,18 @@ function displayRefugeeAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 //function affichage Pape  
@@ -235,6 +283,18 @@ function displayPapeAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 
@@ -262,6 +322,18 @@ function displayJesterAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 //function affichage Capitaine des soldats 
@@ -288,6 +360,18 @@ function displayCaptainAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 //function affichage Chevalier 
@@ -314,6 +398,18 @@ function displayKnightAvatar() {
 
     // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
     center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
 }
 
 //function affichage conseiller 
