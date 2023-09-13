@@ -102,11 +102,19 @@ function displayInventory() {
     }
 }
 
-displayBackground();
+function displayStats() {
+    displayGold();
+    displayFaith();
+    displayArmy();
+    displayPopulation();
+}
+
+
 
 
 function displayAvatar(imagePath, cssClass, dialogText, buttonLeftText, buttonRightText) {
     let center = document.querySelector(".center");
+    center.innerHTML = "";
 
     // Créer une div pour le personnage et la bulle de dialogue
     let characterContainer = document.createElement("div");
@@ -131,14 +139,18 @@ function displayAvatar(imagePath, cssClass, dialogText, buttonLeftText, buttonRi
 
     // Ajouter un bouton dans la div "Left"
     let leftDiv = document.querySelector(".Left");
+    leftDiv.innerHTML = "";
     let leftButton = document.createElement("button");
     leftButton.textContent = buttonLeftText;
+    leftButton.classList.add("buttonLeft");
     leftDiv.appendChild(leftButton);
 
     // Ajouter un bouton dans la div "Right"
     let rightDiv = document.querySelector(".Right");
+    rightDiv.innerHTML = "";
     let rightButton = document.createElement("button");
     rightButton.textContent = buttonRightText;
+    rightButton.classList.add("buttonRight");
     rightDiv.appendChild(rightButton);
 }
 
@@ -304,6 +316,18 @@ function displayPersoAvatar(event) {
     }
     
 }
+
+function displayAndUseEvent(event) {
+    let description = document.querySelector(".dialog-box");
+    let buttonLeft = document.querySelector(".buttonLeft");
+    let buttonRight = document.querySelector(".buttonRight");
+    description.innerHTML = event._description;
+    buttonLeft.innerHTML = event._choice1;
+    buttonRight.innerHTML = event._choice2;
+    buttonLeft.addEventListener("click", () => {event.effect1(player),displayStats(),lancerEvenementAleatoire()});
+    buttonRight.addEventListener("click", () => {event.effect2(player),displayStats(),lancerEvenementAleatoire()});
+    console.log(player);
+}
   
   function lancerEvenementAleatoire() {
   // Générer un nombre aléatoire entre 1 et 15
@@ -312,21 +336,21 @@ function displayPersoAvatar(event) {
 
   // Déclencher l'événement correspondant au nombre aléatoire
   switch (randomNombre) {
-    case 1: displayPersoAvatar(event1); break;
-    case 2: displayPersoAvatar(event2); break;
-    case 3: displayPersoAvatar(event3); break;
-    case 4: displayPersoAvatar(event4); break;
-    case 5: displayPersoAvatar(event5); break;
-    case 6: displayPersoAvatar(event6); break;
-    case 7: displayPersoAvatar(event7); break;
-    case 8: displayPersoAvatar(event8); break;
-    case 9: displayPersoAvatar(event9); break;
-    case 10: displayPersoAvatar(event10); break;
-    case 11: displayPersoAvatar(event11); break;
-    case 12: displayPersoAvatar(event12); break;
-    case 13: displayPersoAvatar(event13); break;
-    case 14: displayPersoAvatar(event14); break;
-    case 15: displayPersoAvatar(event15); break;
+    case 1: displayPersoAvatar(event1),displayAndUseEvent(event1);  break;
+    case 2: displayPersoAvatar(event2),displayAndUseEvent(event2) ; break;
+    case 3: displayPersoAvatar(event3),displayAndUseEvent(event3); break;
+    case 4: displayPersoAvatar(event4),displayAndUseEvent(event4); break;
+    case 5: displayPersoAvatar(event5),displayAndUseEvent(event5); break;
+    case 6: displayPersoAvatar(event6),displayAndUseEvent(event6); break;
+    case 7: displayPersoAvatar(event7),displayAndUseEvent(event7); break;
+    case 8: displayPersoAvatar(event8),displayAndUseEvent(event8); break;
+    case 9: displayPersoAvatar(event9),displayAndUseEvent(event9); break;
+    case 10: displayPersoAvatar(event10),displayAndUseEvent(event10); break;
+    case 11: displayPersoAvatar(event11),displayAndUseEvent(event11); break;
+    case 12: displayPersoAvatar(event12),displayAndUseEvent(event12); break;
+    case 13: displayPersoAvatar(event13),displayAndUseEvent(event13); break;
+    case 14: displayPersoAvatar(event14),displayAndUseEvent(event14); break;
+    case 15: displayPersoAvatar(event15),displayAndUseEvent(event15); break;
     default: console.log("Nombre aléatoire invalide.");
   }
 
@@ -345,11 +369,8 @@ for (let i = 1; i <= 15; i++) {
 
   
 //appel des fonctions
-displayPseudo();
-displayGold();
-displayFaith();
-displayArmy();
-displayPopulation();
+displayBackground();
+displayStats();
 displayInventory();
 lancerEvenementAleatoire();
 
