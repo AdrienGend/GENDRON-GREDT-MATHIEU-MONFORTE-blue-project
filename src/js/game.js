@@ -12,7 +12,6 @@ let player = getPlayer();
 
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const backpack = document.getElementById('backpack');
     const dropdown = document.getElementById('dropdown');
@@ -396,7 +395,7 @@ function displayMarchandAvatar() {
     leftButton.classList.add("SpecialMarchandAcheter")
     leftButton.innerHTML = "<div class=" + "TitleShop" + ">Objets Achetable</div>";
     leftDiv.appendChild(leftButton);
-
+    
     // Ajouter un bouton dans la div "Right"
     let rightDiv = document.querySelector(".Right");
     let rightButton = document.createElement("div");
@@ -405,8 +404,58 @@ function displayMarchandAvatar() {
     "<div class=" + "ItemShop" + ">Objets Vendable</div>";
     rightDiv.appendChild(rightButton);
 }
+//function affichage perso 
+function displayPersoAvatar(event) {
+    console.log("displayPersoAvatar");
+    character = event._personnage;
+    console.log(character);
+    if (character === "advisor") {
+        displayAdvisorAvatar();
+    } else if (character === "archer") {
+        displayArcherAvatar();
+    } else if (character === "capitaine") {
+        displayCaptainAvatar();
+    } else if (character === "chevalier") {
+        displayKnightAvatar();
+    } else if (character === "bouffon") {
+        displayJesterAvatar();
+    } else if (character === "mage") {
+        displayMageAvatar();
+    } else if (character === "marchand") {
+        displayMarchandAvatar();
+    } else if (character === "pape") {
+        displayPapeAvatar();
+    } else if (character === "paysan") {
+        displayPeasantAvatar();
+    } else if (character === "refugier") {
+        displayRefugeeAvatar();
+    }
+    
+}
+  
+  function lancerEvenementAleatoire() {
+  // Générer un nombre aléatoire entre 1 et 15
+  const randomNombre = Math.floor(Math.random() * 15) + 1;
+    console.log(`Nombre aléatoire généré : ${randomNombre}`);
 
-//let event1 = new Event(1, "L'Épidémie Mortelle", "Une épidémie mortelle sévit dans le village.", "Le Pape bénit le village pour guérir la maladie", "Le Conseiller organise une quarantaine stricte",{}, { }, "Pape");
+  // Déclencher l'événement correspondant au nombre aléatoire
+  const evenementId = `event${randomNombre}`;
+    console.log(`Déclenchement de l'événement ${evenementId}`);
+  displayAdvisorAvatar(evenementId);
+}
+
+
+
+// Vous devrez ajouter des écouteurs d'événements pour chaque événement individuel (1 à 15)
+for (let i = 1; i <= 15; i++) {
+  const evenementId = `evenement${i}`;
+  document.addEventListener(evenementId, function () {
+    console.log(`Événement ${evenementId} déclenché.`);
+    // Ajoutez ici le code que vous souhaitez exécuter lorsque l'événement est déclenché.
+  });
+}
+
+  
 //appel des fonctions
 displayPseudo();
 displayGold();
@@ -414,5 +463,6 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
-displayPapeAvatar();
+lancerEvenementAleatoire();
+
 
