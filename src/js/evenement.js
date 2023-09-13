@@ -9,6 +9,13 @@ class Events {
         this.effect2 = effect2;
         this.personnage = personnage;
     }
+    //methods
+    useEffect1(player) {
+        this.effect1(player);
+    }
+    useEffect2(player) {
+        this.effect2(player);
+    }
 
 
 }
