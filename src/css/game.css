@@ -122,8 +122,7 @@
 }
 
 .dialog-box {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #FFE4B5;
     border-radius: 33px;
     padding: 10px;
     width: 300px;
@@ -133,6 +132,8 @@
     left: 55%;
     transform: translateX(-50%); /* Centrer horizontalement */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #8B4513;
+    border: 1px solid  #8B4513;
 }
 
 .dialog-text p {
@@ -145,8 +146,19 @@ button {
     height: 100px;
     width: 400px;
     border-radius: 30px;
+    color: #8B4513;
+    border: 1px solid  #8B4513;
+    background-color: #FFE4B5;
+    font-size: 24px;
+    transition: all 0.5s ease;
 }
 
+button:hover {
+    background-color: #8B4513;
+    color: #FFE4B5;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
 
 /* spécial css pour le Marchand */
 
