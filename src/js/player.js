@@ -51,6 +51,10 @@ class Player {
     set population(population) {
         this._population = population;
     }
+    set inventory(inventory) {
+        this._inventory = inventory;
+    }
+    
 
     //getters
     get name() {
@@ -67,6 +71,9 @@ class Player {
     }
     get population() {
         return this._population;
+    }
+    get inventory() {
+        return this._inventory;
     }
     
 }

@@ -66,3 +66,4 @@ function useNote(){
 form.addEventListener("change", isChecked);
 button.addEventListener("click", initialize);
 formulaire.addEventListener("change", calculerNote);
+

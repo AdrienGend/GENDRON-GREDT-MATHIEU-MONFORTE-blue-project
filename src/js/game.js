@@ -5,9 +5,9 @@ let faith = document.querySelector("#faith");
 let population = document.querySelector("#population");
 let itemStockage = document.querySelector(".Item");
 let background = document.querySelector(".WithOutHeader");
-let player = getPlayer();
-
-
+let playerinfo = getPlayer();
+let player = new Player(playerinfo._name, playerinfo._gold, playerinfo._faith, playerinfo._army, playerinfo._population, playerinfo._inventory);
+console.log("test"+player);
 
 
 
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function getPlayer() {
     let player = localStorage.getItem("player");
     player = JSON.parse(player);
-    console.log(player);
     return player;
     
 }
@@ -85,7 +84,9 @@ function displayPopulation() {
 
 function displayInventory() {
     itemStockage.innerHTML = "";
+    console.log(player);
     let inventory = player.inventory;
+    console.log(inventory);
     for (let i = 0; i < inventory.length; i++) {
         itemImage = inventory[i].image;
         itemDescription = inventory[i].description; // Ajout de la description
@@ -447,9 +448,25 @@ function displayPersoAvatar(event) {
     console.log(`Nombre aléatoire généré : ${randomNombre}`);
 
   // Déclencher l'événement correspondant au nombre aléatoire
-  const evenementId = `event${randomNombre}`;
-    console.log(`Déclenchement de l'événement ${evenementId}`);
-  displayAdvisorAvatar(evenementId);
+  switch (randomNombre) {
+    case 1: displayPersoAvatar(event1); break;
+    case 2: displayPersoAvatar(event2); break;
+    case 3: displayPersoAvatar(event3); break;
+    case 4: displayPersoAvatar(event4); break;
+    case 5: displayPersoAvatar(event5); break;
+    case 6: displayPersoAvatar(event6); break;
+    case 7: displayPersoAvatar(event7); break;
+    case 8: displayPersoAvatar(event8); break;
+    case 9: displayPersoAvatar(event9); break;
+    case 10: displayPersoAvatar(event10); break;
+    case 11: displayPersoAvatar(event11); break;
+    case 12: displayPersoAvatar(event12); break;
+    case 13: displayPersoAvatar(event13); break;
+    case 14: displayPersoAvatar(event14); break;
+    case 15: displayPersoAvatar(event15); break;
+    default: console.log("Nombre aléatoire invalide.");
+  }
+
 }
 
 
@@ -472,5 +489,4 @@ displayArmy();
 displayPopulation();
 displayInventory();
 lancerEvenementAleatoire();
-
 
