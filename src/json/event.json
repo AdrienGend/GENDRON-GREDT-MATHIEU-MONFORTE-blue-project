@@ -1,42 +1,15 @@
 {
-    "personnage":[
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
+    "personnage":
         {
             "nom_personnage":"Marchand"
-        }
-    ],
+        },
 
     "evenements":[
         {
             "title": "L'Épidémie Mortelle",
             "description": "Une épidémie mortelle sévit dans le village.",
             "nom_personnage":"Conseiller",
+            "id":"1",
             "choices": [
                 {
                     "text": "Le Pape bénit le village pour guérir la maladie",
@@ -52,6 +25,7 @@
             "title": "La Révolte des Paysans",
             "description": "Les paysans se révoltent contre les conditions de vie difficiles.",
             "nom_personnage":"Paysan",
+            "id":"2",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats réprime violemment la révolte",
@@ -67,6 +41,7 @@
             "title": "Le Mariage Royal",
             "description": "Un mariage royal est prévu dans le royaume.",
             "nom_personnage":"Bouffon",
+            "id":"3",
             "choices": [
                 {
                     "text": "Le Chevalier organise un somptueux mariage",
@@ -82,6 +57,7 @@
             "title": "La Quête du Graal",
             "description": "Le Graal est recherché pour apporter la gloire au royaume.",
             "nom_personnage":"Pape",
+            "id":"4",
             "choices": [
                 {
                     "text": "Le Chevalier part à la recherche du Graal",
@@ -97,6 +73,7 @@
             "title": "La Peste Noire",
             "description": "La peste noire menace le royaume.",
             "nom_personnage":"Conseiller",
+            "id":"5",
             "choices": [
                 {
                     "text": "Le Pape organise des processions religieuses pour lutter contre la peste",
@@ -112,6 +89,7 @@
             "title": "La Révolte des Soldats",
             "description": "Les soldats se révoltent pour de meilleures conditions.",
             "nom_personnage":"Chef des Chevaliers",
+            "id":"6",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats apaise les soldats en leur offrant des primes",
@@ -127,6 +105,7 @@
             "title": "L'Invasion Barbare",
             "description": "Le royaume est menacé par une invasion barbare.",
             "nom_personnage":"Archer",
+            "id":"7",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats mobilise l'armée pour défendre le royaume",
@@ -142,6 +121,7 @@
             "title": "La Quête du Saint Graal (suite)",
             "description": "La quête du Saint Graal continue.",
             "nom_personnage":"Pape",
+            "id":"8",
             "choices": [
                 {
                     "text": "Le Chevalier trouve le Graal et apporte la gloire au royaume",
@@ -157,6 +137,7 @@
             "title": "La Famine",
             "description": "Le royaume souffre de la famine.",
             "nom_personnage":"Conseiller",
+            "id":"9",
             "choices": [
                 {
                     "text": "Le Chasseur fournit de la viande pour nourrir le peuple affamé",
@@ -172,6 +153,7 @@
             "title": "Le Schisme Religieux",
             "description": "Le royaume est en proie à un schisme religieux.",
             "nom_personnage":"Pape",
+            "id":"10",
             "choices": [
                 {
                     "text": "Le Pape travaille à réconcilier les factions religieuses",
@@ -187,6 +169,7 @@
             "title": "La Guerre avec le Royaume Voisin",
             "description": "Le royaume est en guerre avec un royaume voisin.",
             "nom_personnage":"Chef des Chevaliers",
+            "id":"11",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats prépare l'armée à la guerre",
@@ -202,6 +185,7 @@
             "title": "La Révolte des Réfugiés",
             "description": "Les réfugiés cherchent refuge dans le royaume.",
             "nom_personnage":"Refugier",
+            "id":"12",
             "choices": [
                 {
                     "text": "Le Conseiller accueille les réfugiés et les intègre dans la société",
@@ -217,6 +201,7 @@
             "title": "Le Duel du Chevalier",
             "description": "Le Chevalier se lance dans un duel pour gagner en renomée.",
             "nom_personnage":"Chevalier",
+            "id":"13",
             "choices": [
                 {
                     "text": "Le Chevalier remporte un duel et gagne en renommée",
@@ -232,6 +217,7 @@
             "title": "La Quête du Savoir",
             "description": "Le Mage entreprend une quête pour obtenir des connaissances magiques.",
             "nom_personnage":"Mage",
+            "id":"14",
             "choices": [
                 {
                     "text": "Le Mage entreprend une quête pour obtenir des connaissances magiques",
@@ -247,6 +233,7 @@
             "title": "La Conquête des Terres Lointaines",
             "description": "Le royaume cherche à conquérir de nouvelles terres lointaines.",
             "nom_personnage":"Chef des Chevaliers",
+            "id":"15",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats lance une expédition pour conquérir de nouvelles terres",
