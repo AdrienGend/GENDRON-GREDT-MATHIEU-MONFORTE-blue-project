@@ -2,6 +2,9 @@ let nameValue = document.querySelector("#name");
 let button = document.querySelector("#button");
 let form = document.querySelector("#choice");
 let choice = document.querySelector("#choice input:checked").value;
+const formulaire = document.getElementById('questionnaire');
+const inputs = formulaire.querySelectorAll('input[type="radio"]:checked');
+
 
 function launchGame() {
     window.location.href = "game.html";
@@ -26,6 +29,7 @@ function initialize() {
     player = JSON.stringify(player);
     console.log(player);
     localStorage.setItem("player", player);
+    useNote();
     launchGame();
     
 }
@@ -34,5 +38,28 @@ function isChecked() {
     choice = document.querySelector("#choice input:checked").value;
     console.log(choice);
 }
+// utilisation du formulaire
+function calculerNote() {
+    const formulaire = document.getElementById('questionnaire');
+    const inputs = formulaire.querySelectorAll('input[type="radio"]:checked');
+    let note = 0;
+
+    inputs.forEach(input => {
+      note += parseInt(input.value);
+    });
+
+    // Assurez-vous que la note est comprise entre -3 et 3
+    note = Math.min(3, Math.max(-3, note));
+    return note;
+}
+function useNote(){
+    let note = calculerNote();
+    console.log(note);
+    localStorage.setItem("note", note);
+    
+}
+
+//Event listeners
 form.addEventListener("change", isChecked);
 button.addEventListener("click", initialize);
+formulaire.addEventListener("change", calculerNote);
