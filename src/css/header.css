@@ -51,6 +51,11 @@ body {
     background-color: rgb(31, 31, 32);
 }
 
+.selection p {
+    padding-left: 10px;
+    font-size:  25px;
+}
+
 img {
     height: 50px;
     width: 50px;
