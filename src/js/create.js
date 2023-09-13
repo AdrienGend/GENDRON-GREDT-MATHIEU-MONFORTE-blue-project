@@ -14,6 +14,9 @@ function launchGame() {
 function initialize() {
     console.log("initialize");
     let playerName = nameValue.value; 
+    if (playerName === "") {
+        playerName = "Joueur";
+    }
     let player = new Player(playerName, 50, 50, 50, 50, []);
 
     console.log(item1);
