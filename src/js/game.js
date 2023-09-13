@@ -414,5 +414,5 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
-//displayMarchandAvatar();
+displayPapeAvatar();
 
