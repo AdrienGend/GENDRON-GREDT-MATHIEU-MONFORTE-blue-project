@@ -115,8 +115,6 @@ function displayMageAvatar() {
 }
 
 
-
-
 //function affichage Archer
 function displayArcherAvatar() {
     let center = document.querySelector(".center");
@@ -339,15 +337,9 @@ function displayAdvisorAvatar() {
 }
 
 //appel des fonctions
-
 displayPseudo();
 displayGold();
 displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
-<<<<<<< HEAD
-displayAdvisorAvatar();
-=======
-
->>>>>>> 6cd1a2be294019c3a0e58ceec27adb758ab76238

@@ -29,7 +29,7 @@
     border: 2px solid #5a5a5a;
     /* Bordure plus foncée */
     border-radius: 15px;
-    height: 50%;
+    height: 60%;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -44,15 +44,15 @@
     align-items: center;
 }
 
-form {
-    height: 40%;
+#choice {
+    height: 30%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-form ul {
+#choice ul {
     width: 100%;
     height: 100%;
     display: flex;
@@ -60,6 +60,38 @@ form ul {
     align-items: center;
     list-style: none;
     padding: 0;
+}
+
+#questionnaire {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+}
+
+.choix {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.choix title {
+    text-align: center;
+}
+
+.choixreponse {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.choix input[type="radio"]:checked + label {
+    text-decoration: underline white; /* Trait blanc sous le texte */
 }
 
 label {
@@ -74,11 +106,58 @@ label img {
 }
 
 input[type="radio"] {
-    /*display: none;*/
+    display: none;
 }
 
 input:checked + img {
     border: 2px solid #ffcc00;
     border-radius: 15px;
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
+
+/* Styles pour l'input médiéval */
+#name {
+    border: 2px solid #8B4513; /* Couleur du cadre */
+    background-color: #FFE4B5; /* Couleur de fond */
+    padding: 10px; /* Espace intérieur */
+    font-family: 'Times New Roman', serif; /* Police médiévale */
+    font-size: 16px; /* Taille de la police */
+    color: #8B4513; /* Couleur du texte */
+    width: 250px;
+}
+
+/* Style pour le texte de l'placeholder (texte de l'exemple) */
+#name::placeholder {
+    color: #8B4513; /* Couleur du texte de l'exemple */
+    font-style: italic; /* Style d'écriture italique pour l'exemple */
+}
+
+/* Style lorsque l'input est en focus (sélectionné) */
+#name:focus {
+    outline: none; /* Supprime le contour par défaut */
+    border-color: #CD853F; /* Couleur du cadre lorsqu'en focus */
+}
+
+/* Styles pour le bouton médiéval */
+#button {
+    background-color: #8B4513; /* Couleur de fond du bouton */
+    color: #FFF; /* Couleur du texte */
+    border: 2px solid #CD853F; /* Couleur du cadre */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-family: 'Times New Roman', serif; /* Police médiévale */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur personnalisé */
+    transition: background-color 0.3s ease-in-out; /* Transition de couleur de fond */
+}
+
+/* Style pour le bouton au survol */
+#button:hover {
+    background-color: #CD853F; /* Couleur de fond au survol */
+}
+
+/* Style pour le bouton lorsqu'en focus (sélectionné) */
+#button:focus {
+    outline: none; /* Supprime le contour par défaut */
+    border-color: #8B4513; /* Couleur du cadre en focus */
+}
+
