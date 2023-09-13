@@ -74,7 +74,7 @@ label img {
 }
 
 input[type="radio"] {
-    display: none;
+    /*display: none;*/
 }
 
 input:checked + img {

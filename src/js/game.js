@@ -4,6 +4,7 @@ let gold = document.querySelector("#gold");
 let faith = document.querySelector("#faith");
 let population = document.querySelector("#population");
 let itemStockage = document.querySelector(".Item");
+let background = document.querySelector(".WithOutHeader");
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -30,8 +31,26 @@ function getPlayer() {
     player = JSON.parse(player);
     return player;
 }
+function getNote() {
+    let note = localStorage.getItem("note");
+    note = JSON.parse(note);
+    return note;
+}
+
+
 
 //affichage informations joueur
+function displayBackground() {
+    let note = getNote();
+    if (note > 1) {
+        background.style.backgroundImage = "url('./image/chateauGentil.jpg')";
+    }else if (note < -1) {
+        background.style.backgroundImage = "url('./image/chateauSombre.jpg')";
+    }else {
+        background.style.backgroundImage = "url('./image/SalleDuTrone.png')";
+    }
+}
+
 function displayPseudo() {
     let player = getPlayer();
     pseudo.innerHTML = player._name;
@@ -68,7 +87,7 @@ function displayInventory() {
     }
 }
 
-
+displayBackground();
 displayPseudo();
 displayGold();
 displayFaith();

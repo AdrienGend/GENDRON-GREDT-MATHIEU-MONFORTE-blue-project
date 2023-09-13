@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="./css/game.css" />
+    <link type="text/css" rel="stylesheet" href="./css/header.css" />
+    <link type="text/css" rel="stylesheet" href="./css/create.css" />
+    <title>Création du Roi</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link type="text/css" rel="stylesheet" href="./css/game.css">
-  <link type="text/css" rel="stylesheet" href="./css/header.css">
-  <link type="text/css" rel="stylesheet" href="./css/create.css">
-  <title>Création du Roi</title>
-</head>
-
-<body>
-  <div class="background">
-    <div class="ChoicePlayer">
-      <div class="title">
-        <h1>Créer votre souverain</h1>
+  <body>
+    <div class="background">
+      <div class="ChoicePlayer">
+        <div class="title">
+          <h1>Créer votre souverain</h1>
+        </div>
+        <label for="name">Nom du souverain</label>
+        <input type="text" id="name" name="user_name" />
+        <form id="choice">
+          <ul>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="selectedImage"
+                  value="item1"
+                  checked
+                />
+                <img src="./image/amulettederichesse.png" alt="Image 1" />
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="selectedImage" value="item2" />
+                <img src="./image/artefactsacree.png" alt="Image 2" />
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="selectedImage" value="item3" />
+                <img src="./image/talismanbeni.png" alt="Image 3" />
+              </label>
+            </li>
+          </ul>
+        </form>
+        <!--formulaire choix de salle-->
+        <form id="questionnaire">
+          <p>Un aveugle vous demande l'aumône:</p>
+          <input type="radio" name="choice1" value="1" />
+          <label for="html">Lui donner une pièce</label>
+          <input type="radio" name="choice1" value="-1" />
+          <label for="css">L'ignorer</label>
+      
+          <p>Un homme fait tomber sa bourse devant vous:</p>
+          <input type="radio" name="choice2" value="1" />
+          <label for="html">La lui rendre</label>
+          <input type="radio" name="choice2" value="-1" />
+          <label for="css">La garder</label>
+      
+          <p>Que faire des prisonniers de guerre:</p>
+          <input type="radio" id="html" name="choice3" value="1" />
+          <label for="html">Bien les traiter</label>
+          <input type="radio" id="css" name="choice3" value="-1" />
+          <label for="css">Pas de pitié</label>
+  
+        </form>
+        <input type="submit" value="Sélectionner" id="button" />
       </div>
-      <label for="name">Nom du souverain</label>
-      <input type="text" id="name" name="user_name" />
-      <form id="choice">
-        <ul>
-          <li>
-            <label>
-              <input type="radio" name="selectedImage" value="item1" checked>
-              <img src="./image/amulettederichesse.png" alt="Image 1">
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="radio" name="selectedImage" value="item2">
-              <img src="./image/artefactsacree.png" alt="Image 2">
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="radio" name="selectedImage" value="item3">
-              <img src="./image/talismanbeni.png" alt="Image 3">
-            </label>
-          </li>
-        </ul>
-      </form>
-      <input type="submit" value="Sélectionner" id="button">
     </div>
-
-  </div>
-</body>
-<script src="./js/objet.js"></script>
-<script src="./js/player.js"></script>
-<script src="./js/create.js"></script>
-
+  </body>
+  <script src="./js/objet.js"></script>
+  <script src="./js/player.js"></script>
+  <script src="./js/create.js"></script>
 </html>

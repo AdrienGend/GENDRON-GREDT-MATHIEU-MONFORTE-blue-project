@@ -3,6 +3,8 @@
     width: 100%;
     display: flex;
     background-image: url("../image/chateauSombre.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .Right, .Left{
