@@ -1,7 +1,7 @@
 localStorage.setItem("foi", "10")
 localStorage.setItem("or", "10")
-localStorage.setItem("bonheur", "10")
-localStorage.setItem("militaire", "0")
+localStorage.setItem("bonheur", "100")
+localStorage.setItem("militaire", "10")
 
 var foi = localStorage.getItem('foi');
 var or = localStorage.getItem('or');
@@ -33,7 +33,8 @@ if (militaire == 0){
 
 if (foi == 100){
     document.querySelector('p').textContent = 'La religion a pris le pouvoir.';
-    background.style.backgroundImage = "url('./image/fin-foi100.png')";
+    background.style.backgroundImage = "url('./image/fin-foi100.png')", width="1920px",height = "1080px";
+    p.style.color = "white";
 }
 
 if (or == 100){
