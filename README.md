@@ -16,3 +16,5 @@ Pour lancer le jeu, ouvrez la page start puis suivez les instructions.
 Dans la racine, on retrouve le README.md, la répartition des tâches ainsi que le dossier [src](C:\Users\pierr\Documents\. Ynov\Forum\GENDRON-GREDT-MATHIEU-MONFORTE-ProjetBlue\src) qui regroupe tout les dossiers et fichiers du jeu.
 
 Dans le dossier [src](C:\Users\pierr\Documents\. Ynov\Forum\GENDRON-GREDT-MATHIEU-MONFORTE-ProjetBlue\src), on retrouve :
+
+* On retrouve le dossier de la police du jeu : [Black Knight Kong font](C:\Users\pierr\Documents\. Ynov\Forum\GENDRON-GREDT-MATHIEU-MONFORTE-ProjetBlue\src\black-knight-kong-font)
