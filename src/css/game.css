@@ -57,7 +57,7 @@
 
 .Backpack {
     position: absolute;
-    top: 0; /* Positionnez-le au coin supérieur droit de .Right */
+    top: 0;
     right: 0;
     height: 125px;
     width: 125px;
@@ -71,6 +71,9 @@
 }
 
 .Dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin: 15px 30px 0px 0px;
     background-color: #2b2b2b;
     border: 2px solid #5a5a5a;
