@@ -326,3 +326,8 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
+<<<<<<< HEAD
+displayAdvisorAvatar();
+=======
+
+>>>>>>> 6cd1a2be294019c3a0e58ceec27adb758ab76238
