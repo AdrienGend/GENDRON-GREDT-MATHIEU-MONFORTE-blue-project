@@ -75,7 +75,6 @@ const items = [
     item6,
     item7,
     item8,
-    
 ];
 
 console.log(items);
