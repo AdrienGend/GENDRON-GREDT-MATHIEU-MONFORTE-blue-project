@@ -85,15 +85,23 @@ function displayPopulation() {
 }
 
 function displayInventory() {
-    
     itemStockage.innerHTML = "";
     let inventory = player.inventory;
     for (let i = 0; i < inventory.length; i++) {
         itemImage = inventory[i].image;
+        itemDescription = inventory[i].description; // Ajout de la description
         console.log(itemImage);
-        itemStockage.innerHTML += `<img src="${itemImage}" alt="item">`
+        itemStockage.innerHTML += `
+            <div class="inventory-item">
+                <img src="${itemImage}" alt="item">
+                <div class="description">
+                    <p>${itemDescription}</p>
+                </div>
+            </div>
+        `;
     }
 }
+
 
 
 
