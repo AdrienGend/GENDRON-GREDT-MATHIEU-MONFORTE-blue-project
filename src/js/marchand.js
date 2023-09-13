@@ -47,7 +47,7 @@ function handleSellEvent(player, items) {
     console.log("Objets à vendre :");
 
     // Utilisez getPlayer() pour obtenir le joueur
-let player = getPlayer();
+let playerData = getPlayer();
 
 // Maintenant, vous pouvez accéder à l'inventaire du joueur sans erreur
 for (let i = 0; i < player.inventory.length; i++) {
@@ -75,10 +75,9 @@ const items = [
     item6,
     item7,
     item8,
-    // Ajoutez d'autres objets du fichier "objet.js" ici
+    
 ];
 
 console.log(items);
 
-// Utilisez la fonction pour gérer l'événement Marchand
-handleMerchantEvent(Player, Item);
+
