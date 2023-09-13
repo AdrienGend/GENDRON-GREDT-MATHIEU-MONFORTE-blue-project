@@ -46,10 +46,13 @@ function handleSellEvent(player, items) {
     console.log("Le marchand propose d'acheter vos objets !");
     console.log("Objets à vendre :");
 
-    // Affichez les objets dans l'inventaire du joueur
-    for (let i = 0; i < player.inventory.length; i++) {
-        console.log(`${i + 1}. ${player.inventory[i].name} - Valeur: ${player.inventory[i].price} pièces d'or`);
-    }
+    // Utilisez getPlayer() pour obtenir le joueur
+let player = getPlayer();
+
+// Maintenant, vous pouvez accéder à l'inventaire du joueur sans erreur
+for (let i = 0; i < player.inventory.length; i++) {
+    console.log(`${i + 1}. ${player.inventory[i].name} - Valeur: ${player.inventory[i].price} pièces d'or`);
+}
 
     // Permettez au joueur de choisir un objet à vendre
     const choixVente = parseInt(prompt("Choisissez un objet à vendre (entrez le numéro) :"));

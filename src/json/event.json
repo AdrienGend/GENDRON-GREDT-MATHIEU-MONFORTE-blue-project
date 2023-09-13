@@ -9,7 +9,7 @@
             "title": "L'Épidémie Mortelle",
             "description": "Une épidémie mortelle sévit dans le village.",
             "nom_personnage":"Conseiller",
-            "id":"01",
+            "id":"1",
             "choices": [
                 {
                     "text": "Le Pape bénit le village pour guérir la maladie",
@@ -25,7 +25,7 @@
             "title": "La Révolte des Paysans",
             "description": "Les paysans se révoltent contre les conditions de vie difficiles.",
             "nom_personnage":"Paysan",
-            "id":"02",
+            "id":"2",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats réprime violemment la révolte",
@@ -41,7 +41,7 @@
             "title": "Le Mariage Royal",
             "description": "Un mariage royal est prévu dans le royaume.",
             "nom_personnage":"Bouffon",
-            "id":"03",
+            "id":"3",
             "choices": [
                 {
                     "text": "Le Chevalier organise un somptueux mariage",
@@ -57,7 +57,7 @@
             "title": "La Quête du Graal",
             "description": "Le Graal est recherché pour apporter la gloire au royaume.",
             "nom_personnage":"Pape",
-            "id":"04",
+            "id":"4",
             "choices": [
                 {
                     "text": "Le Chevalier part à la recherche du Graal",
@@ -73,7 +73,7 @@
             "title": "La Peste Noire",
             "description": "La peste noire menace le royaume.",
             "nom_personnage":"Conseiller",
-            "id":"05",
+            "id":"5",
             "choices": [
                 {
                     "text": "Le Pape organise des processions religieuses pour lutter contre la peste",
@@ -89,7 +89,7 @@
             "title": "La Révolte des Soldats",
             "description": "Les soldats se révoltent pour de meilleures conditions.",
             "nom_personnage":"Chef des Chevaliers",
-            "id":"06",
+            "id":"6",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats apaise les soldats en leur offrant des primes",
@@ -105,7 +105,7 @@
             "title": "L'Invasion Barbare",
             "description": "Le royaume est menacé par une invasion barbare.",
             "nom_personnage":"Archer",
-            "id":"07",
+            "id":"7",
             "choices": [
                 {
                     "text": "Le Capitaine des soldats mobilise l'armée pour défendre le royaume",
@@ -121,7 +121,7 @@
             "title": "La Quête du Saint Graal (suite)",
             "description": "La quête du Saint Graal continue.",
             "nom_personnage":"Pape",
-            "id":"08",
+            "id":"8",
             "choices": [
                 {
                     "text": "Le Chevalier trouve le Graal et apporte la gloire au royaume",
@@ -137,7 +137,7 @@
             "title": "La Famine",
             "description": "Le royaume souffre de la famine.",
             "nom_personnage":"Conseiller",
-            "id":"09",
+            "id":"9",
             "choices": [
                 {
                     "text": "Le Chasseur fournit de la viande pour nourrir le peuple affamé",
