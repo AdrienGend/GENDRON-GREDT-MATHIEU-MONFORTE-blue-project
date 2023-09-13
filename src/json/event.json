@@ -1,36 +1,8 @@
 {
-    "personnage":[
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
-        {
-            
-        },
+    "personnage":
         {
             "nom_personnage":"Marchand"
-        }
-    ],
+        },
 
     "evenements":[
         {
