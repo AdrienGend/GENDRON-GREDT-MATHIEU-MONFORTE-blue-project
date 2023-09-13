@@ -382,14 +382,14 @@ function displayMarchandAvatar() {
 
     // Ajouter un bouton dans la div "Left"
     let leftDiv = document.querySelector(".Left");
-    let leftButton = document.createElement("button");
+    let leftButton = document.createElement("div");
     leftButton.classList.add("SpecialMarchandAcheter")
     leftButton.innerHTML = "<div class=" + "TitleShop" + ">Objets Achetable</div>";
     leftDiv.appendChild(leftButton);
 
     // Ajouter un bouton dans la div "Right"
     let rightDiv = document.querySelector(".Right");
-    let rightButton = document.createElement("button");
+    let rightButton = document.createElement("div");
     rightButton.classList.add("SpecialMarchandVendre")
     rightButton.innerHTML = "<div class=" + "TitleShop" + ">Objets Vendable</div>"
     rightDiv.appendChild(rightButton);

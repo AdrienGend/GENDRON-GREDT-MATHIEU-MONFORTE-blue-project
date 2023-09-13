@@ -166,10 +166,12 @@ button:hover {
 .SpecialMarchandAcheter, .SpecialMarchandVendre {
     height: 450px;
     width: 400px;
-    background-color: #2b2b2b;
+    background-color: #FFE4B5;
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 150px;
+    border: 1px solid  #8B4513;
+    border-radius: 30px;
 }
 
 /* Coté Achetable */
@@ -180,5 +182,5 @@ button:hover {
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    color: white;
+    color: #8B4513;
 }
