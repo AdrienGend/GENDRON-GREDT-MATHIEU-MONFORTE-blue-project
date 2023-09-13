@@ -28,8 +28,9 @@ body {
     height: 100%;
     width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 15px;
 }
 
 .PlayerInfo img {
