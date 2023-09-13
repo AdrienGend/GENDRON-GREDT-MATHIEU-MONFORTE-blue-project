@@ -355,6 +355,44 @@ fetch('./json/event.json')
 
 }
 
+//function affichage Marchant
+function displayMarchandAvatar() {
+    let center = document.querySelector(".center");
+
+    // Créer une div pour le personnage et la bulle de dialogue
+    let characterContainer = document.createElement("div");
+    characterContainer.classList.add("character-container");
+
+    // Créer l'image du personnage
+    let characterImg = document.createElement("img");
+    characterImg.src = "image/Personnage/Marchand.png";
+    characterImg.classList.add("gauche");
+
+    // Créer la bulle de dialogue
+    let dialogBox = document.createElement("div");
+    dialogBox.classList.add("dialog-box");
+    dialogBox.textContent = "Ceci est le texte de la bulle de dialogue.";
+
+    // Ajouter l'image du personnage et la bulle de dialogue au conteneur
+    characterContainer.appendChild(characterImg);
+    characterContainer.appendChild(dialogBox);
+
+    // Ajouter le conteneur du personnage et de la bulle de dialogue au centre
+    center.appendChild(characterContainer);
+
+    // Ajouter un bouton dans la div "Left"
+    let leftDiv = document.querySelector(".Left");
+    let leftButton = document.createElement("button");
+    leftButton.textContent = "Bouton Gauche";
+    leftDiv.appendChild(leftButton);
+
+    // Ajouter un bouton dans la div "Right"
+    let rightDiv = document.querySelector(".Right");
+    let rightButton = document.createElement("button");
+    rightButton.textContent = "Bouton Droite";
+    rightDiv.appendChild(rightButton);
+}
+
 //appel des fonctions
 displayPseudo();
 displayGold();
@@ -362,4 +400,8 @@ displayFaith();
 displayArmy();
 displayPopulation();
 displayInventory();
+<<<<<<< HEAD
+displayMarchandAvatar();
+=======
 Getfromjson();
+>>>>>>> f361aed96cb4cc07b0527b570187bdb0198b55ca
