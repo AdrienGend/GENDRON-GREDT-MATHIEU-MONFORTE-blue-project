@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'black knight';
+    src: url(../black-knight-kong-font/Black\ Knight.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'black knight', sans-serif;
+    letter-spacing: 2px;
 }
 
 body {
