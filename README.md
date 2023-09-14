@@ -77,15 +77,16 @@ Backend :
 
 ***Mathis :***
 
-Frontend :
-
 * Interface jeu
 * Inventaire
 * Header
-* page game
-* page create
+* page game.html
+* page create.html
 * Fonction affichage des personnages
 * Optimisation fonction création personnage
+* Fonction game.js
+* Ajustement fonction end.js
+* Description des objets
 
 ***Philippe :***
 
@@ -95,12 +96,12 @@ Backend page game :
 * Create.js
 * Fonction Initialisation du jeu
 * Fonction affichage des ressources du jeu
-* Fonction random
+* Fonction random pour les évènements
 * Fonction affichage des évènements
 * Fonction changement des ressources
 
 ***Pierre :***
 
-* Page daccueil et pages de fin (frontend et backend)
+* Page d'accueil et pages de fin (frontend et backend start.html, start.js, end.html et end.js)
 * Recherche dimages
 * Equilibrage évènements (backend)
