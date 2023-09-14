@@ -22,11 +22,11 @@ function initialize() {
     console.log(item1);
     console.log(choice);
     if (choice === "item1") {
-        player.addItem(item1);
+        localStorage.setItem("item", 1);
     } else if (choice === "item2") {
-        player.addItem(item2);
+        localStorage.setItem("item", 2);
     } else if (choice === "item3") {
-        player.addItem(item3);
+        localStorage.setItem("item", 3);
     }
     console.log(player);
     player = JSON.stringify(player);
