@@ -32,7 +32,6 @@ const item4 = new Item("Talisman de Prospérité", "Évite la banqueroute en mai
 const item5 = new Item("L'Épée de la Vertu", "Ajoute de la puissance militaire", 0, () => {
     player.changePopulation(10)},"./image/epeevertu.png");
 
-
 // Objet 6 : Amulette de l'Évasion
 const item6 = new Item("Amulette de l'Évasion", "Permet au joueur de passer un évènement en cours de jeu, évitant ainsi ses conséquences. L'amulette est détruite après utilisation.", 0, () => {
     // TODO
@@ -44,4 +43,3 @@ const item7 = new Item("Corne de l'Abondance", "Permet au joueur d'augmenter l'o
 
 // Objet 8 : Bouclier Divin
 const item8 = new Item("Bouclier Divin", "Augmente le pouvoir militaire de 10.", 2, () => { player.changeArmy(10);},"./image/bouclier.png")
-
