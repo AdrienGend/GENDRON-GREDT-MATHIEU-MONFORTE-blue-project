@@ -72,7 +72,7 @@ Backend :
 * Les objets
 * Les évènements
 * Fonction Random des évènements
-* Fonction use item
+
 
 ***Mathis :***
 
@@ -82,11 +82,13 @@ Backend :
 * page game.html et game.css
 * page create.html et create.css
 * Fonction affichage des personnages
-* Optimisation fonction création personnage
+* Optimisation fonction affichage pnj
 * Fonction game.js
 * Ajustement fonction end.js
 * Description des objets
 * Utilisation et suppression objet
+* Fonction Random des évènements
+* affichage statistiques fin du jeu
 
 ***Philippe :***
 
@@ -94,6 +96,7 @@ Backend :
 
 * player.js
 * Create.js
+* classe objet
 * Fonction Initialisation du jeu
 * Fonction affichage des ressources du jeu
 * Fonction random pour les évènements
@@ -101,6 +104,9 @@ Backend :
 * Fonction changement des ressources
 * Utilisation et suppression objet
 * Les class
+* Fonction use item
+* Fonction Random des évènements
+* vérification imput du nom
 
 ***Pierre :***
 
