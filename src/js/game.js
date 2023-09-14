@@ -115,6 +115,8 @@ function displayInventory() {
     }
 }
 
+
+
 function displayStats() {
     displayGold();
     displayFaith();
@@ -429,5 +431,7 @@ displayStats();
 startWithItem();
 lancerEvenementAleatoire();
 player.addItem(item1);
+player.addItem(item2);
+player.addItem(item3);
 displayInventory();
 
