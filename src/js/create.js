@@ -72,6 +72,7 @@ function calculerNote() {
     note = Math.min(3, Math.max(-3, note));
     return note;
 }
+
 function useNote(){
     let note = calculerNote();
     console.log(note);
