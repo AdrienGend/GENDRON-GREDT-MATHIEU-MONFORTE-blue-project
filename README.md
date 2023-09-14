@@ -80,7 +80,7 @@ Backend :
 * Inventaire
 * Header
 * page game.html et game.css
-* page create.html et create.html
+* page create.html et create.css
 * Fonction affichage des personnages
 * Optimisation fonction création personnage
 * Fonction game.js
@@ -100,9 +100,12 @@ Backend :
 * Fonction affichage des évènements
 * Fonction changement des ressources
 * Utilisation et suppression objet
+* Les class
 
 ***Pierre :***
 
 * Page d'accueil et pages de fin (frontend et backend start.html, start.js, end.html et end.js)
-* Recherche dimages
+* Recherche d'images
 * Equilibrage évènements (backend)
+* README.md
+* Répartition des tâches
