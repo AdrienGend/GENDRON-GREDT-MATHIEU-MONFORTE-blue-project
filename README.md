@@ -72,16 +72,14 @@ Backend :
 * Les objets
 * Les évènements
 * Fonction Random des évènements
-* Fonction random
-* Fonction marchant
 
 ***Mathis :***
 
 * Interface jeu
 * Inventaire
 * Header
-* page game.html
-* page create.html
+* page game.html et game.css
+* page create.html et create.html
 * Fonction affichage des personnages
 * Optimisation fonction création personnage
 * Fonction game.js
