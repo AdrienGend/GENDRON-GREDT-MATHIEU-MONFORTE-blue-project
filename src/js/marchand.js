@@ -30,7 +30,7 @@ function evenementMarchandItineraire(totalEvents, player) {
     item7,
     item8,
   ];
-  
+  //test mathis
   console.log(objetsDisponibles);
   // Fonction pour acheter un objet
   function acheterObjet(player, objetIndex) {
