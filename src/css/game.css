@@ -130,25 +130,17 @@
 }
 
 .inventory-item .description {
-    bottom: 0;
-    left: 0;
     width: 50%;
     padding: 5px;
-    visibility: hidden;
     font-size: 20px;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.inventory-item img:hover + .description {
-    visibility: visible;
-    opacity: 1;
-}
+
 
 .description {
     height: 20%;
