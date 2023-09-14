@@ -155,15 +155,15 @@ function displayAvatar(imagePath, cssClass, dialogText, buttonLeftText, buttonRi
     // Ajouter un bouton dans la div "Left"
     let leftDiv = document.querySelector(".Left");
     let leftButton = document.createElement("button");
-    leftButton.innerHTML = "";
+    leftDiv.innerHTML = "";
     leftButton.textContent = buttonLeftText;
     leftButton.classList.add("buttonLeft");
     leftDiv.appendChild(leftButton);
 
     // Ajouter un bouton dans la div "Right"
-    let rightDiv = document.querySelector(".Right");
+    let rightDiv = document.querySelector(".up");
     let rightButton = document.createElement("button");
-    rightButton.innerHTML = "";
+    rightDiv.innerHTML = "";
     rightButton.textContent = buttonRightText;
     rightButton.classList.add("buttonRight");
     rightDiv.appendChild(rightButton);
