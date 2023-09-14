@@ -61,3 +61,49 @@ Dans le dossier [src](src), on retrouve :
 * Enfin, on retrouve le [word de la répartition des tâches](Répartition des taches.docx).
 
 ## La répartition des tâches
+
+
+Nous avons réparti les tâches de la manière suivante :
+
+***Adrien :***
+
+Backend :
+
+* Marchand.js
+* Les objets
+* Les évènements
+* Fonction Random des évènements
+* Fonction random
+
+
+***Mathis :***
+
+Frontend :
+
+* Interface jeu
+* Inventaire
+* Header
+* page game
+* page create
+* Fonction affichage des personnages
+* Optimisation fonction création personnage
+
+
+***Philippe :***
+
+Backend page game :
+
+* player.js
+* Create.js
+* Fonction Initialisation du jeu
+* Fonction affichage des ressources du jeu
+* Fonction random
+* Fonction affichage des évènements
+* Fonction changement des ressources
+
+
+***Pierre :***
+
+* Page daccueil et pages de fin (frontend et backend)
+* Recherche dimages
+* Equilibrage évènements (backend)
