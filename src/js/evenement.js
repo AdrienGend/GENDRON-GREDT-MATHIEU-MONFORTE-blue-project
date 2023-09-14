@@ -1,6 +1,6 @@
 class Events {
-    constructor(id, title, description, choice1,choice2,effect1,effect2, personnage) {
-        this.id = id;
+    constructor(bool, title, description, choice1,choice2,effect1,effect2, personnage) {
+        this.bool = bool;
         this.title = title;
         this.description = description;
         this.choice1 = choice1;
@@ -10,8 +10,8 @@ class Events {
         this.personnage = personnage;
     }
     //getters
-    get id() {
-        return this._id;
+    get bool() {
+        return this._bool;
     }
     get title() {
         return this._title;
@@ -35,8 +35,8 @@ class Events {
         return this._personnage;
     }
     //setters
-    set id(id) {
-        this._id = id;
+    set bool(bool) {
+        this._bool = bool;
     }
     set title(title) {
         this._title = title;
