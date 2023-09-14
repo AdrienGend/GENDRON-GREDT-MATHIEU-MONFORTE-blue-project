@@ -1,81 +1,82 @@
-// Fonction pour gérer l'événement Marchand itinéraire
-function evenementMarchandItineraire(totalEvents, player) {
-    // Calcul de la fréquence
-    const frequence = calculerFrequence(totalEvents);
-  
-    // Générer un nombre aléatoire entre 1 et 100 (pourcentage)
-    const randomPourcentage = Math.random() * 100;
-  
-    // Vérifier si l'événement se produit en fonction de la fréquence
-    if (randomPourcentage <= frequence) {
-      // L'événement se produit, vous pouvez maintenant gérer la vente et l'achat d'objets ici
-      // Vous devrez avoir une liste d'objets et un mécanisme pour effectuer des transactions.
-  
-      // Exemple d'achat d'objet (choisissez un objet aléatoire)
-      const objetIndex = Math.floor(Math.random() * objetsDisponibles.length);
-      acheterObjet(player, objetIndex);
-  
-      // Exemple de vente d'objet (choisissez un objet aléatoire de l'inventaire du joueur)
-      if (player.inventory.length > 0) {
-        const objetAVendreIndex = Math.floor(Math.random() * player.inventory.length);
-        vendreObjet(player, objetAVendreIndex);
-      }
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Définissez une fonction pour vérifier si un événement de marchand doit être déclenché
+function shouldTriggerMerchantEvent(totalEvents) {
+    // Générez un nombre aléatoire entre 1 et totalEvents
+    const randomEvent = getRandomInt(1, totalEvents);
+    // Si le nombre généré est inférieur ou égal à 5 (par exemple), déclenchez l'événement marchand
+    // Vous pouvez ajuster ce chiffre selon vos besoins pour contrôler la fréquence des événements marchands.
+    return randomEvent <= 5; // Dans cet exemple, 5 est la fréquence d'apparition du marchand.
+}
+
+// Créez une fonction pour gérer l'événement Marchand
+function handleMerchantEvent(player, items) {
+    if (shouldTriggerMerchantEvent(player.totalEvents)) {
+        console.log("Un marchand itinérant apparaît !");
+        console.log("Objets à vendre :");
+
+        // Affichez les objets que le joueur peut acheter
+        for (let i = 0; i < items.length; i++) {
+            console.log(`${i + 1}. ${items[i].name} - Prix: ${items[i].price} pièces d'or`);
+        }
+
+        // Permettez au joueur d'acheter des objets
+        const choixAchat = parseInt(prompt("Choisissez un objet à acheter (entrez le numéro) :"));
+
+        if (!isNaN(choixAchat) && choixAchat >= 1 && choixAchat <= items.length) {
+            const itemAchat = items[choixAchat - 1];
+
+            if (player.gold >= itemAchat.price) {
+                console.log(`Vous avez acheté ${itemAchat.name} pour ${itemAchat.price} pièces d'or.`);
+                player.gold -= itemAchat.price;
+                player.addItem(itemAchat);
+            } else {
+                console.log("Vous n'avez pas assez d'or pour acheter cet objet.");
+            }
+        } else {
+            console.log("Choix invalide.");
+        }
     }
-  }
-  
-  const objetsDisponibles = [
+}
+
+// Créez une fonction pour gérer l'événement de vente du marchand
+function handleSellEvent(player, items) {
+    console.log("Le marchand propose d'acheter vos objets !");
+    console.log("Objets à vendre :");
+
+    // Utilisez getPlayer() pour obtenir le joueur
+let playerData = getPlayer();
+
+// Maintenant, vous pouvez accéder à l'inventaire du joueur sans erreur
+for (let i = 0; i < player.inventory.length; i++) {
+    console.log(`${i + 1}. ${player.inventory[i].name} - Valeur: ${player.inventory[i].price} pièces d'or`);
+}
+
+    // Permettez au joueur de choisir un objet à vendre
+    const choixVente = parseInt(prompt("Choisissez un objet à vendre (entrez le numéro) :"));
+
+    if (!isNaN(choixVente) && choixVente >= 1 && choixVente <= player.inventory.length) {
+        const itemVente = player.inventory[choixVente - 1];
+
+        console.log(`Vous vendez ${itemVente.name} pour ${itemVente.price} pièces d'or.`);
+        player.gold += itemVente.price;
+        player.removeItem(itemVente); // Supprimez l'objet de l'inventaire du joueur
+    } else {
+        console.log("Choix invalide.");
+    }
+}
+
+// Utilisez les objets dans votre tableau "items"
+const items = [
     item4,
     item5,
     item6,
     item7,
     item8,
-  ];
-  //test mathis
-  console.log(objetsDisponibles);
-  // Fonction pour acheter un objet
-  function acheterObjet(player, objetIndex) {
-    const objetAchete = objetsDisponibles[objetIndex];
-    player=player;
-    // Vérifier si le joueur a suffisamment d'argent pour acheter l'objet
-    if (player.gold >= objetAchete.price) {
-      // Déduire le prix de l'objet de l'argent du joueur
-      player.gold -= objetAchete.price;
-  
-      // Ajouter l'objet à l'inventaire du joueur en utilisant sa méthode "use"
-      objetAchete.use(player);
-  
-      console.log(`Vous avez acheté ${objetAchete.name} pour ${objetAchete.price} pièces d'or.`);
-      return true; // L'achat a réussi
-    } else {
-      console.log("Vous n'avez pas assez d'argent pour acheter cet objet.");
-      return false; // L'achat a échoué
-    }
-  }
-  
-  // Fonction pour vendre un objet
-  function vendreObjet(player, objetIndex) {
-    const objetAVendre = player.inventory[objetIndex];
-   player=player;
-    if (objetAVendre) {
-      // Ajouter le prix de l'objet à l'argent du joueur
-      player.gold += objetAVendre.price;
-  
-      // Retirer l'objet de l'inventaire du joueur
-      player.inventory.splice(objetIndex, 1);
-  
-      console.log(`Vous avez vendu ${objetAVendre.name} pour ${objetAVendre.price} pièces d'or.`);
-      return true; // La vente a réussi
-    } else {
-      console.log("Cet objet n'est pas présent dans votre inventaire.");
-      return false; // La vente a échoué
-    }
-  }
-  
-  // Acheter un objet (par exemple, le premier objet de la liste)
-  acheterObjet(player, 0);
-  
-  // Vendre un objet (par exemple, le premier objet de l'inventaire du joueur)
-  if (player.inventory.length > 0) {
-    vendreObjet(player, 0);
-  }
-  
+];
+
+console.log(items);
+
+
