@@ -62,7 +62,6 @@ Dans le dossier [src](src), on retrouve :
 
 ## La répartition des tâches
 
-
 Nous avons réparti les tâches de la manière suivante :
 
 ***Adrien :***
@@ -74,7 +73,7 @@ Backend :
 * Les évènements
 * Fonction Random des évènements
 * Fonction random
-
+* Fonction marchant
 
 ***Mathis :***
 
@@ -88,7 +87,6 @@ Frontend :
 * Fonction affichage des personnages
 * Optimisation fonction création personnage
 
-
 ***Philippe :***
 
 Backend page game :
@@ -100,7 +98,6 @@ Backend page game :
 * Fonction random
 * Fonction affichage des évènements
 * Fonction changement des ressources
-
 
 ***Pierre :***
 
