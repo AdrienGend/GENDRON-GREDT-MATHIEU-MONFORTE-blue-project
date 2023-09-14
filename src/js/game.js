@@ -7,7 +7,6 @@ let itemStockage = document.querySelector(".Item");
 let background = document.querySelector(".WithOutHeader");
 let playerinfo = getPlayer();
 let player = new Player(playerinfo._name, playerinfo._gold, playerinfo._faith, playerinfo._army, playerinfo._population, playerinfo._inventory);
-console.log("test"+player);
 
 
 
@@ -139,16 +138,16 @@ function displayAvatar(imagePath, cssClass, dialogText, buttonLeftText, buttonRi
 
     // Ajouter un bouton dans la div "Left"
     let leftDiv = document.querySelector(".Left");
-    leftDiv.innerHTML = "";
     let leftButton = document.createElement("button");
+    leftButton.innerHTML = "";
     leftButton.textContent = buttonLeftText;
     leftButton.classList.add("buttonLeft");
     leftDiv.appendChild(leftButton);
 
     // Ajouter un bouton dans la div "Right"
     let rightDiv = document.querySelector(".Right");
-    rightDiv.innerHTML = "";
     let rightButton = document.createElement("button");
+    rightButton.innerHTML = "";
     rightButton.textContent = buttonRightText;
     rightButton.classList.add("buttonRight");
     rightDiv.appendChild(rightButton);
@@ -406,8 +405,6 @@ function endGame() {
     }else{
         lancerEvenementAleatoire();
     }
-    
-
 }
 
   
