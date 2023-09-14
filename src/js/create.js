@@ -8,14 +8,17 @@ const inputs = formulaire.querySelectorAll('input[type="radio"]:checked');
 function checkname() {
     bool = true;
     let name = document.querySelector("#name").value;
-    //le nom doit contenir entre 3 et 16 caractères et ne doit pas contenir de caractères spéciaux ni d'espace
-    if (name.length < 3 || name.length > 16 || name.match(/[^a-zA-Z0-9]/) || name.match(/\s/)) {
+    //le nom doit contenir entre 3 et 16 caractères et ne doit pas contenir de caractères spéciaux ni d'espace ni de chiffres
+    if (name.length < 3 || name.length > 16 || name.match(/[^a-zA-Z]/) || name.match(/\s/) || name.match(/\d/)) {
         bool = false;
         nameValue.value = "";
         nameValue.placeholder = "Nom invalide";
         nameValue.style.border = "2px solid red";
     }
     if (bool) {
+        //passer la première lettre en majuscule et le reste en minuscule
+        nameValue.value = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+        //initialisation du joueur
         initialize();
     } 
     
