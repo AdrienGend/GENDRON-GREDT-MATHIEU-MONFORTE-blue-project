@@ -26,6 +26,9 @@ class Player {
     addItem(item) {
         this.inventory.push(item);
     }
+    removeItem(item) {
+        this.inventory.splice(item, 1);
+    }
 
     printPlayerStats() {
     console.log(this.name);
