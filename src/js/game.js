@@ -337,14 +337,33 @@ function lancerEvenementAleatoire() {
     if (listEvent.length === 0) {
         localStorage.setItem("end", 0);
         window.location.href = "end.html";
+        return; // Arrête la fonction si la liste des événements est vide.
     }
-    eventNumber = Math.floor(Math.random() * listEvent.length);
-    displayPersoAvatar(listEvent[eventNumber]);
-    displayAndUseEvent(listEvent[eventNumber]);
-    //suppression de l'événement de la liste
-    listEvent.splice(eventNumber, 1);
 
+    const totalEvents = listEvent.length;
+    let eventsBeforeFixed = 2 + Math.floor(totalEvents / 3);
+   
+    // Génère un événement aléatoire tant que nous n'atteignons pas le seuil
+    if (eventsBeforeFixed > 0) {
+        eventNumber = Math.floor(Math.random() * listEvent.length);
+        displayPersoAvatar(listEvent[eventNumber]);
+        displayAndUseEvent(listEvent[eventNumber]);
+        // Suppression de l'événement de la liste
+        listEvent.splice(eventNumber, 1);
+        // Actualise la valeur de eventsBeforeFixed
+        eventsBeforeFixed--;
+        console.log("Nombre d'événements avant l'événement fixe : " + eventsBeforeFixed);
+    } else {
+        // Génère un événement fixe
+        const fixedEventIndex = totalEvents - eventsBeforeFixed;
+        displayPersoAvatar(listEvent[fixedEventIndex]);
+        displayAndUseEvent(listEvent[fixedEventIndex]);
+        // Suppression de l'événement de la liste
+        listEvent.splice(fixedEventIndex, 1);
+    }
 }
+
+
 
 // Vous devrez ajouter des écouteurs d'événements pour chaque événement individuel (1 à 15)
 for (let i = 1; i <= 15; i++) {

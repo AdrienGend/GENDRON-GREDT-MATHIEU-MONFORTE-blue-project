@@ -38,6 +38,7 @@ class Player {
     console.log(this.population);
     console.log(this.inventory);
     }
+    
     //setters
     set name(name) {
         this._name = name;

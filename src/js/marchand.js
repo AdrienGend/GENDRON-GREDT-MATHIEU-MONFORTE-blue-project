@@ -31,7 +31,6 @@ function evenementMarchandItineraire(totalEvents, player) {
     item8,
   ];
   
-  //console.log(objetsDisponibles);
   // Fonction pour acheter un objet
   function acheterObjet(player, objetIndex) {
     const objetAchete = objetsDisponibles[objetIndex];
@@ -41,7 +40,6 @@ function evenementMarchandItineraire(totalEvents, player) {
       // Déduire le prix de l'objet de l'argent du joueur
       player.gold -= objetAchete.price;
   
-      //m
       // Ajouter l'objet à l'inventaire du joueur en utilisant sa méthode "use"
       objetAchete.use(player);
   

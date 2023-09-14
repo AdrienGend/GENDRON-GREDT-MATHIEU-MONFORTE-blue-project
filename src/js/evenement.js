@@ -73,7 +73,6 @@ class Events {
 
 }
 
-
 const event1 = new Events(false,"L'Epidémie Mortelle", "Une épidémie mortelle sévit dans le village.", "Le Pape bénit le village pour guérir la maladie", "Le Conseiller organise une quarantaine stricte",() => {player.changeFaith(25),player.changePopulation(-30)},() => {player.changeArmy(20),player.changePopulation(-30)} , "pape");
 const event2 = new Events(false,"La Révolte des Paysans", "Les paysans se révoltent contre les conditions de vie difficiles.", "Le Capitaine des soldats réprime violemment la révolte", "Le Mage utilise des sorts pour calmer les paysans",() => {player.changeArmy(20),player.changePopulation(-30)},() => {player.changeFaith(25),player.changePopulation(-10)} , "capitaine");
 const event3 = new Events(false,"Le Mariage Royal", "Un mariage royal est prévu dans le royaume.", "Le Chevalier organise un somptueux mariage", "Le Bouffon anime la fête avec humour",() => {player.changeGold(-15),player.changePopulation(10)},() => {player.changeGold(-7),player.changePopulation(15)} , "bouffon");

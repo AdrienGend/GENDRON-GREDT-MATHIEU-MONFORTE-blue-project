@@ -16,52 +16,49 @@ var background = document.getElementsByClassName("background")[0];
 var fin = document.querySelector('.fin');
 
 function loadEnd() {
+    const messages = [
+        "Des sectes se sont formées et ont pris le pouvoir. Vous avez été emprisonné.",
+        "Vous êtes ruiné.",
+        "Votre peuple a faim, ils vous ont renversé et trucidé.",
+        "Votre armée est trop faible pour faire respecter la loi. Des bandits font la loi dans votre royaume.",
+        "La religion a pris le pouvoir.",
+        "Vous êtes devenu riche. Les royaumes voisins ont décidé de vous envahir.",
+        "Lors de la fête du royaume, vous avez été empoisonné.",
+        "Vous subissez un coup d'État de l'armée. Vous êtes exécuté."
+    ];
 
-    if (end == 0) {
+    if (end >= 0 && end < messages.length) {
+        fin.innerHTML = messages[end];
+
+        const backgroundImageUrls = [
+            "./image/fin-fin-foi0.png",
+            "./image/fin-or0.png",
+            "./image/fin-bonheur0.png",
+            "./image/fin-militaire0.png",
+            "./image/fin-foi100.png",
+            "./image/fin-or100.png",
+            "./image/fin-bonheur100.png",
+            "./image/fin-militaire100.png"
+        ];
+
+        if (end >= 0 && end < backgroundImageUrls.length) {
+            background.style.backgroundImage = `url('${backgroundImageUrls[end]}')`;
+        }
+
         gold.innerHTML = player._gold;
-    }
-    if (end == 1) {
-        fin.innerHTML = 'Des sectes se sont formées et ont pris le pouvoir. Vous avez été emprisonné' + '';
-        background.style.backgroundImage = "url('./image/fin-fin-foi0.png')";
-    }
+        faith.innerHTML = player._faith;
+        army.innerHTML = player._army;
+        population.innerHTML = player._population;
 
-    if (end == 2) {
-        fin.innerHTML = 'Vous êtes ruiné.';
-        background.style.backgroundImage = "url('./image/fin-or0.png')";
-    }
-
-    if (end == 3) {
-        fin.innerHTML = 'Votre peuple a faim, ils vous a renverser et trucidé.';
-        background.style.backgroundImage = "url('./image/fin-bonheur0.png')";
-    }
-
-    if (end == 4) {
-        fin.innerHTML = 'Votre armée est trop faible pour faire respecter la loi. Des bandits font la loi dans votre royaume.';
-        background.style.backgroundImage = "url('./image/fin-militaire0.png')";
-    }
-
-    if (end == 5) {
-        fin.innerHTML = 'La religion a pris le pouvoir.';
-        background.style.backgroundImage = "url('./image/fin-foi100.png')", width = "1920px", height = "1080px";
-        p.style.color = "white";
-    }
-
-    if (end == 6) {
-        fin.innerHTML = 'Vous êtes devenu riche. Les royaumes voisins ont décidé de vous envahir.';
-        background.style.backgroundImage = "url('./image/fin-or100.png')";
-    }
-
-    if (end == 7) {
-        fin.innerHTML = 'Lors de la fête du royaume, vous avez été empoisonnée.';
-        background.style.backgroundImage = "url('./image/fin-bonheur100.png')";
-    }
-
-    if (end == 8) {
-        fin.innerHTML = "Vous subissez un coup d'état de l'armée. Vous êtes exécuté.";
-        background.style.backgroundImage = "url('./image/fin-militaire100.png')";
+        if (end === 4) {
+            background.style.width = "1920px";
+            background.style.height = "1080px";
+            p.style.color = "white";
+        }
+    } else {
+        localStorage.setItem("end", 0);
+        window.location.href = "end.html";
     }
 }
-
-
 
 loadEnd();
