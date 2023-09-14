@@ -5,7 +5,21 @@ let choice = document.querySelector("#choice input:checked").value;
 const formulaire = document.getElementById('questionnaire');
 const inputs = formulaire.querySelectorAll('input[type="radio"]:checked');
 
-
+function checkname() {
+    bool = true;
+    let name = document.querySelector("#name").value;
+    //le nom doit contenir entre 3 et 16 caractères et ne doit pas contenir de caractères spéciaux ni d'espace
+    if (name.length < 3 || name.length > 16 || name.match(/[^a-zA-Z0-9]/) || name.match(/\s/)) {
+        bool = false;
+        nameValue.value = "";
+        nameValue.placeholder = "Nom invalide";
+        nameValue.style.border = "2px solid red";
+    }
+    if (bool) {
+        initialize();
+    } 
+    
+}
 function launchGame() {
     window.location.href = "game.html";
     console.log("launchGame");
@@ -64,6 +78,6 @@ function useNote(){
 
 //Event listeners
 form.addEventListener("change", isChecked);
-button.addEventListener("click", initialize);
+button.addEventListener("click", checkname);
 formulaire.addEventListener("change", calculerNote);
 
