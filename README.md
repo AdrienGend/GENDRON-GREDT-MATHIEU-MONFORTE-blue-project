@@ -72,6 +72,7 @@ Backend :
 * Les objets
 * Les évènements
 * Fonction Random des évènements
+* Fonction use item
 
 ***Mathis :***
 
@@ -85,10 +86,11 @@ Backend :
 * Fonction game.js
 * Ajustement fonction end.js
 * Description des objets
+* Utilisation et suppression objet
 
 ***Philippe :***
 
-Backend page game :
+Backend :
 
 * player.js
 * Create.js
@@ -97,6 +99,7 @@ Backend page game :
 * Fonction random pour les évènements
 * Fonction affichage des évènements
 * Fonction changement des ressources
+* Utilisation et suppression objet
 
 ***Pierre :***
 
