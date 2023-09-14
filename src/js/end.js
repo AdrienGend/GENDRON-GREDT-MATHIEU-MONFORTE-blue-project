@@ -6,6 +6,8 @@ var background = document.getElementsByClassName("background")[0];
 var p = document.querySelector('p');
 function loadEnd(){
 
+if (end == 0){  
+    break;
 if (end == 1){
     document.querySelector('p').textContent = 'Des sectes se sont formées et ont pris le pouvoir. Vous avez été emprisonné';
     background.style.backgroundImage = "url('./image/fin-fin-foi0.png')";
