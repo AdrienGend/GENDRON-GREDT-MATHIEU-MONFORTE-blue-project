@@ -96,8 +96,8 @@ function displayInventory() {
     itemStockage.innerHTML = "";
     let inventory = player.inventory;
     for (let i = 0; i < inventory.length; i++) {
-        itemImage = inventory[i].image;
-        itemEffect = inventory[i].effect;
+        let itemImage = inventory[i].image;
+        let itemEffect = inventory[i].effect;
 
         itemDescription = inventory[i].description; // Ajout de la description
         itemStockage.innerHTML += `
@@ -108,8 +108,13 @@ function displayInventory() {
                 </div>
             </div>
         `;
+        let actItem = document.querySelector(".inventory-item");
+        actItem.addEventListener("click", () => { itemEffect(), displayStats(),player.removeItem(inventory[i]), displayInventory() });
     }
 }
+
+
+
 
 
 function displayStats() {
@@ -412,4 +417,5 @@ displayStats();
 startWithItem();
 lancerEvenementAleatoire();
 displayInventory();
+
 
