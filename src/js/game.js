@@ -42,6 +42,20 @@ function getNote() {
     return note;
 }
 
+function startWithItem() {
+    let item = localStorage.getItem("item");
+    item = JSON.parse(item);
+    console.log(item);
+    if (item === 1) {
+        player.addItem(item1);
+    } else if (item === 2) {
+        player.addItem(item2);
+    } else if (item === 3) {
+        player.addItem(item3);
+    }
+    displayInventory();
+}
+
 
 
 //affichage informations joueur
@@ -292,7 +306,7 @@ function displayPersoAvatar(event) {
     console.log("displayPersoAvatar");
     character = event._personnage;
     console.log(character);
-    if (character === "advisor") {
+    if (character === "conseiller") {
         displayAdvisorAvatar();
     } else if (character === "archer") {
         displayArcherAvatar();
@@ -408,9 +422,12 @@ function endGame() {
 }
 
   
-//appel des fonctions
+//appel des fonctions*
+displayPseudo();
 displayBackground();
 displayStats();
-displayInventory();
+startWithItem();
 lancerEvenementAleatoire();
+player.addItem(item1);
+displayInventory();
 
