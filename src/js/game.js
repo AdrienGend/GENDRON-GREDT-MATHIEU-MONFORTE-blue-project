@@ -6,7 +6,7 @@ let population = document.querySelector("#population");
 let itemStockage = document.querySelector(".Item");
 let background = document.querySelector(".WithOutHeader");
 let playerinfo = getPlayer();
-let player = new Player(playerinfo._name, playerinfo._gold, playerinfo._faith, playerinfo._army, playerinfo._population, playerinfo._inventory);
+var player = new Player(playerinfo._name, playerinfo._gold, playerinfo._faith, playerinfo._army, playerinfo._population, playerinfo.inventory);
 
 
 
