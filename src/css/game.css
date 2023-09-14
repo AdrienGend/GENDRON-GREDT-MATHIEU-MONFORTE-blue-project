@@ -112,6 +112,7 @@
     width: 35%;
     border: 3px solid #fff; 
     border-radius: 10px; 
+    cursor: pointer;
 }
 
 
@@ -155,6 +156,7 @@
 .dialog-box {
     background-color: #FFE4B5;
     border-radius: 33px;
+    font-size: 30px;
     padding: 10px;
     width: 300px;
     height: 150px;

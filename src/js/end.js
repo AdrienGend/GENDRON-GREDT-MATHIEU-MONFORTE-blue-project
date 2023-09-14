@@ -1,3 +1,5 @@
+
+
 let end = localStorage.getItem("end");
 
 var background = document.getElementsByClassName("background")[0];
@@ -7,7 +9,7 @@ function loadEnd(){
 if (end == 0){  
     break;
 if (end == 1){
-    document.querySelector('p').textContent = "Des sectes se sont formées et ont pris le pouvoir. Vous avez été emprisonné.";
+    document.querySelector('p').textContent = 'Des sectes se sont formées et ont pris le pouvoir. Vous avez été emprisonné';
     background.style.backgroundImage = "url('./image/fin-fin-foi0.png')";
 }
 
@@ -46,6 +48,9 @@ if (end == 8){
     document.querySelector('p').textContent = "Vous subissez un coup d'état de l'armée. Vous êtes exécuté.";
     background.style.backgroundImage = "url('./image/fin-militaire100.png')";
 }
+displayStats();
 }
+
+
 
 loadEnd();

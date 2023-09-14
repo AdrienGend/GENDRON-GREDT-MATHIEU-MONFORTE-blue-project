@@ -126,8 +126,6 @@ function displayStats() {
 }
 
 
-
-
 function displayAvatar(imagePath, cssClass, dialogText, buttonLeftText, buttonRightText) {
     let center = document.querySelector(".center");
     center.innerHTML = "";
