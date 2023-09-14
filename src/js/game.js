@@ -327,7 +327,6 @@ function displayPersoAvatar(event) {
     } else if (character === "refugier") {
         displayRefugeeAvatar();
     }
-    
 }
 
 function displayAndUseEvent(event) {
@@ -428,6 +427,5 @@ displayBackground();
 displayStats();
 startWithItem();
 lancerEvenementAleatoire();
-player.addItem(item1);
 displayInventory();
 
