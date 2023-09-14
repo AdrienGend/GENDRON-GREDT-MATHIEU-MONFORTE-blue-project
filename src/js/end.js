@@ -4,6 +4,8 @@ function getPlayer() {
     return player;
 }
 
+
+
 let player = getPlayer();
 let end = localStorage.getItem("end");
 let gold = document.querySelector('#gold');
@@ -15,10 +17,15 @@ let name = document.querySelector('#name');
 var background = document.getElementsByClassName("background")[0];
 var fin = document.querySelector('.fin');
 
+console.log("or avant" + player._gold);
+console.log("foi avant" + player._faith);
+console.log("army avant" + player._army);
+console.log("bonheur avant" + player._population);
+
 function loadEnd() {
     const messages = [
         "Des sectes se sont formées et ont pris le pouvoir. Vous avez été emprisonné.",
-        "Vous êtes ruiné.",
+        "Vous êtes ruiné. Votre économie s'éffondre.",
         "Votre peuple a faim, ils vous ont renversé et trucidé.",
         "Votre armée est trop faible pour faire respecter la loi. Des bandits font la loi dans votre royaume.",
         "La religion a pris le pouvoir.",
@@ -28,10 +35,10 @@ function loadEnd() {
     ];
 
     if (end >= 0 && end < messages.length) {
-        fin.innerHTML = messages[end];
+        fin.innerHTML = messages[end-1];
 
         const backgroundImageUrls = [
-            "./image/fin-fin-foi0.png",
+            "./image/fin-foi0.png",
             "./image/fin-or0.png",
             "./image/fin-bonheur0.png",
             "./image/fin-militaire0.png",
@@ -42,7 +49,13 @@ function loadEnd() {
         ];
 
         if (end >= 0 && end < backgroundImageUrls.length) {
-            background.style.backgroundImage = `url('${backgroundImageUrls[end]}')`;
+            background.style.backgroundImage = `url('${backgroundImageUrls[end-1]}')`;
+        }
+
+        if (end === 4) {
+            background.style.width = "1920px";
+            background.style.height = "1080px";
+            p.style.color = "white";
         }
 
         gold.innerHTML = player._gold;
@@ -50,11 +63,12 @@ function loadEnd() {
         army.innerHTML = player._army;
         population.innerHTML = player._population;
 
-        if (end === 4) {
-            background.style.width = "1920px";
-            background.style.height = "1080px";
-            p.style.color = "white";
-        }
+
+        console.log("or apres" + player._gold);
+        console.log("foi apres" + player._faith);
+        console.log("army apres" + player._army);
+        console.log("bonheur apres" + player._population);
+
     } else {
         localStorage.setItem("end", 0);
         window.location.href = "end.html";
