@@ -11,7 +11,6 @@ let listEvent = [];
 listEvent.push(event1, event2, event3, event4, event5, event6, event7, event8, event9, event10, event11, event12, event13, event14);
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const backpack = document.getElementById('backpack');
     const dropdown = document.getElementById('dropdown');
@@ -101,11 +100,11 @@ function displayInventory() {
     for (let i = 0; i < inventory.length; i++) {
         itemImage = inventory[i].image;
         itemEffect = inventory[i].effect;
-        itemRemove = inventory[i].remove;
+        
         itemDescription = inventory[i].description; // Ajout de la description
         itemStockage.innerHTML += `
             <div class="inventory-item">
-                <img src="${itemImage}" onclick="${itemEffect, displayStats}" alt="item">
+                <img src="${itemImage}" alt="item">
                 <div class="description"
                     <p>${itemDescription}</p>
                 </div>
@@ -113,6 +112,7 @@ function displayInventory() {
         `;
     }
 }
+
 
 
 

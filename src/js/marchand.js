@@ -31,7 +31,7 @@ function evenementMarchandItineraire(totalEvents, player) {
     item8,
   ];
   
-  console.log(objetsDisponibles);
+  //console.log(objetsDisponibles);
   // Fonction pour acheter un objet
   function acheterObjet(player, objetIndex) {
     const objetAchete = objetsDisponibles[objetIndex];
