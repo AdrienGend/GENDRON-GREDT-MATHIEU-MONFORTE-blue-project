@@ -41,7 +41,7 @@ function isChecked() {
     choice = document.querySelector("#choice input:checked").value;
     console.log(choice);
 }
-// utilisation du formulaire
+
 function calculerNote() {
     const formulaire = document.getElementById('questionnaire');
     const inputs = formulaire.querySelectorAll('input[type="radio"]:checked');

@@ -161,11 +161,10 @@
     width: 300px;
     height: 150px;
     position: absolute;
-    top: -100px; /* Positionnement au-dessus du personnage */
+    top: -100px;
     left: 55%;
-    transform: translateX(-50%); /* Centrer horizontalement */
+    transform: translateX(-50%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #8B4513;
     border: 1px solid  #8B4513;
 }
 
@@ -179,7 +178,6 @@ button {
     height: 100px;
     width: 400px;
     border-radius: 30px;
-    color: #8B4513;
     border: 1px solid  #8B4513;
     background-color: #FFE4B5;
     font-size: 24px;

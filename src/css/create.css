@@ -25,9 +25,7 @@
 .ChoicePlayer {
     color: white;
     background-color: #2b2b2b;
-    /* Fond sombre */
     border: 2px solid #5a5a5a;
-    /* Bordure plus foncée */
     border-radius: 15px;
     height: 60%;
     width: 30%;
@@ -117,47 +115,42 @@ input:checked + img {
 
 /* Styles pour l'input médiéval */
 #name {
-    border: 2px solid #8B4513; /* Couleur du cadre */
-    background-color: #FFE4B5; /* Couleur de fond */
-    padding: 10px; /* Espace intérieur */
-    font-family: 'Times New Roman', serif; /* Police médiévale */
-    font-size: 16px; /* Taille de la police */
-    color: #8B4513; /* Couleur du texte */
+    border: 2px solid #8B4513;
+    background-color: #FFE4B5;
+    padding: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
     width: 250px;
 }
 
-/* Style pour le texte de l'placeholder (texte de l'exemple) */
+
 #name::placeholder {
-    color: #8B4513; /* Couleur du texte de l'exemple */
-    font-style: italic; /* Style d'écriture italique pour l'exemple */
+    font-style: italic;
 }
 
-/* Style lorsque l'input est en focus (sélectionné) */
+
 #name:focus {
-    outline: none; /* Supprime le contour par défaut */
-    border-color: #CD853F; /* Couleur du cadre lorsqu'en focus */
+    outline: none;
+    border-color: #CD853F;
 }
 
-/* Styles pour le bouton médiéval */
 #button {
-    background-color: #8B4513; /* Couleur de fond du bouton */
-    color: #FFF; /* Couleur du texte */
-    border: 2px solid #CD853F; /* Couleur du cadre */
-    padding: 10px 20px; /* Espacement intérieur */
-    font-family: 'Times New Roman', serif; /* Police médiévale */
-    font-size: 16px; /* Taille de la police */
-    cursor: pointer; /* Curseur personnalisé */
-    transition: background-color 0.3s ease-in-out; /* Transition de couleur de fond */
+    background-color: #8B4513;
+    color: #FFF;
+    border: 2px solid #CD853F;
+    padding: 10px 20px;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Style pour le bouton au survol */
 #button:hover {
-    background-color: #CD853F; /* Couleur de fond au survol */
+    background-color: #CD853F;
 }
 
-/* Style pour le bouton lorsqu'en focus (sélectionné) */
 #button:focus {
-    outline: none; /* Supprime le contour par défaut */
-    border-color: #8B4513; /* Couleur du cadre en focus */
+    outline: none;
+    border-color: #8B4513;
 }
 

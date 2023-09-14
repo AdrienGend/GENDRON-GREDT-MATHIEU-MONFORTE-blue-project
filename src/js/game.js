@@ -6,7 +6,7 @@ let population = document.querySelector("#population");
 let itemStockage = document.querySelector(".Item");
 let background = document.querySelector(".WithOutHeader");
 let playerinfo = getPlayer();
-let player = new Player(playerinfo._name, playerinfo._gold, playerinfo._faith, playerinfo._army, playerinfo._population, playerinfo._inventory);
+var player = new Player(playerinfo._name, playerinfo._gold, playerinfo._faith, playerinfo._army, playerinfo._population, playerinfo._inventory);
 let listEvent = [];
 listEvent.push(event1, event2, event3, event4, event5, event6, event7, event8, event9, event10, event11, event12, event13, event14);
 
@@ -17,13 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeButton = document.getElementById('closeButton');
 
     backpack.addEventListener('click', function () {
-        // Affiche le dropdown et masque le sac à dos
         dropdown.style.display = 'block';
         backpack.style.display = 'none';
     });
 
     closeButton.addEventListener('click', function () {
-        // Masque le dropdown et affiche à nouveau le sac à dos
         dropdown.style.display = 'none';
         backpack.style.display = 'block';
     });
@@ -34,8 +32,8 @@ function getPlayer() {
     let player = localStorage.getItem("player");
     player = JSON.parse(player);
     return player;
-    
 }
+
 function getNote() {
     let note = localStorage.getItem("note");
     note = JSON.parse(note);
@@ -70,27 +68,27 @@ function displayBackground() {
 }
 
 function displayPseudo() {
-    
+
     pseudo.innerHTML = player._name;
 }
 
 function displayGold() {
-    
+
     gold.innerHTML = player._gold;
 }
 
 function displayFaith() {
-   
+
     faith.innerHTML = player._faith;
 }
 
 function displayArmy() {
-    
+
     army.innerHTML = player._army;
 }
 
 function displayPopulation() {
-   
+
     population.innerHTML = player._population;
 }
 
@@ -100,7 +98,7 @@ function displayInventory() {
     for (let i = 0; i < inventory.length; i++) {
         itemImage = inventory[i].image;
         itemEffect = inventory[i].effect;
-        
+
         itemDescription = inventory[i].description; // Ajout de la description
         itemStockage.innerHTML += `
             <div class="inventory-item">
@@ -114,10 +112,7 @@ function displayInventory() {
 }
 
 
-
-
 function displayStats() {
-    console.log("displayStats");
     displayGold();
     displayFaith();
     displayArmy();
@@ -198,7 +193,7 @@ function displayPeasantAvatar() {
         "Bouton Gauche",
         "Bouton Droite"
     );
-    
+
 }
 
 //function affichage refugier
@@ -334,11 +329,11 @@ function displayAndUseEvent(event) {
     description.innerHTML = event._description;
     buttonLeft.innerHTML = event._choice1;
     buttonRight.innerHTML = event._choice2;
-    buttonLeft.addEventListener("click", () => {event.effect1(player),displayStats(),endGame()});
-    buttonRight.addEventListener("click", () => {event.effect2(player),displayStats(),endGame()});
+    buttonLeft.addEventListener("click", () => { event.effect1(player), displayStats(), endGame() });
+    buttonRight.addEventListener("click", () => { event.effect2(player), displayStats(), endGame() });
 }
 
-  function lancerEvenementAleatoire() {
+function lancerEvenementAleatoire() {
     if (listEvent.length === 0) {
         localStorage.setItem("end", 0);
         window.location.href = "end.html";
@@ -353,53 +348,44 @@ function displayAndUseEvent(event) {
 
 // Vous devrez ajouter des écouteurs d'événements pour chaque événement individuel (1 à 15)
 for (let i = 1; i <= 15; i++) {
-  const evenementId = `evenement${i}`;
-  document.addEventListener(evenementId, function () {
-    // Ajoutez ici le code que vous souhaitez exécuter lorsque l'événement est déclenché.
-  });
+    const evenementId = `evenement${i}`;
+    document.addEventListener(evenementId, function () {
+        // Ajoutez ici le code que vous souhaitez exécuter lorsque l'événement est déclenché.
+    });
 }
+
 
 function endGame() {
-    let end
-    if (player._faith <= 0){
+    let end;
+    if (player._faith <= 0) {
         end = 1;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-    }else if (player._gold <= 0){
+    } else if (player._gold <= 0) {
         end = 2;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-    }else if (player._population <= 0){
+    } else if (player._population <= 0) {
         end = 3;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-    }else if (player._army <= 0){
+    } else if (player._army <= 0) {
         end = 4;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-    }else if (player._faith >= 100){
+    } else if (player._faith >= 100) {
         end = 5;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-
-    }else if (player._gold >= 100){
+    } else if (player._gold >= 100) {
         end = 6;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-    }else if (player._population >= 100){
+    } else if (player._population >= 100) {
         end = 7;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-    }else if (player._army >= 100){
+    } else if (player._army >= 100) {
         end = 8;
-        localStorage.setItem("end", end);
-        window.location.href = "end.html";
-    }else{
+    } else {
         lancerEvenementAleatoire();
+        return;
     }
+    localStorage.setItem("end", end);
+
+    player = JSON.stringify(player);
+    localStorage.setItem("player", player);
+
+    window.location.href = "end.html";
 }
 
-  
+
 //appel des fonctions*
 displayPseudo();
 displayBackground();
