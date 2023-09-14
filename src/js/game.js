@@ -46,7 +46,6 @@ function getNote() {
 function startWithItem() {
     let item = localStorage.getItem("item");
     item = JSON.parse(item);
-    console.log(item);
     if (item === 1) {
         player.addItem(item1);
     } else if (item === 2) {
@@ -98,17 +97,16 @@ function displayPopulation() {
 
 function displayInventory() {
     itemStockage.innerHTML = "";
-    console.log(player);
     let inventory = player.inventory;
-    console.log(inventory);
     for (let i = 0; i < inventory.length; i++) {
         itemImage = inventory[i].image;
+        itemEffect = inventory[i].effect;
+        itemRemove = inventory[i].remove;
         itemDescription = inventory[i].description; // Ajout de la description
-        console.log(itemImage);
         itemStockage.innerHTML += `
             <div class="inventory-item">
-                <img src="${itemImage}" alt="item">
-                <div class="description">
+                <img src="${itemImage}" onclick="${itemEffect, displayStats}" alt="item">
+                <div class="description"
                     <p>${itemDescription}</p>
                 </div>
             </div>
@@ -119,6 +117,7 @@ function displayInventory() {
 
 
 function displayStats() {
+    console.log("displayStats");
     displayGold();
     displayFaith();
     displayArmy();
@@ -304,9 +303,7 @@ function Getfromjson() {
 
 //function affichage perso 
 function displayPersoAvatar(event) {
-    console.log("displayPersoAvatar");
     character = event._personnage;
-    console.log(character);
     if (character === "conseiller") {
         displayAdvisorAvatar();
     } else if (character === "archer") {
@@ -339,11 +336,8 @@ function displayAndUseEvent(event) {
     buttonRight.innerHTML = event._choice2;
     buttonLeft.addEventListener("click", () => {event.effect1(player),displayStats(),endGame()});
     buttonRight.addEventListener("click", () => {event.effect2(player),displayStats(),endGame()});
-    console.log(player);
 }
 
-
-  
   function lancerEvenementAleatoire() {
     if (listEvent.length === 0) {
         localStorage.setItem("end", 0);
@@ -354,23 +348,18 @@ function displayAndUseEvent(event) {
     displayAndUseEvent(listEvent[eventNumber]);
     //suppression de l'événement de la liste
     listEvent.splice(eventNumber, 1);
-    console.log(listEvent);
 
 }
-
-
 
 // Vous devrez ajouter des écouteurs d'événements pour chaque événement individuel (1 à 15)
 for (let i = 1; i <= 15; i++) {
   const evenementId = `evenement${i}`;
   document.addEventListener(evenementId, function () {
-    console.log(`Événement ${evenementId} déclenché.`);
     // Ajoutez ici le code que vous souhaitez exécuter lorsque l'événement est déclenché.
   });
 }
 
 function endGame() {
-    console.log("endGame");
     let end
     if (player._faith <= 0){
         end = 1;
