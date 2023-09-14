@@ -7,7 +7,8 @@ let itemStockage = document.querySelector(".Item");
 let background = document.querySelector(".WithOutHeader");
 let playerinfo = getPlayer();
 let player = new Player(playerinfo._name, playerinfo._gold, playerinfo._faith, playerinfo._army, playerinfo._population, playerinfo._inventory);
-
+let listEvent = [];
+listEvent.push(event1, event2, event3, event4, event5, event6, event7, event8, event9, event10, event11, event12, event13, event14);
 
 
 
@@ -340,31 +341,20 @@ function displayAndUseEvent(event) {
     buttonRight.addEventListener("click", () => {event.effect2(player),displayStats(),endGame()});
     console.log(player);
 }
+
+
   
   function lancerEvenementAleatoire() {
-  // Générer un nombre aléatoire entre 1 et 15
-  const randomNombre = Math.floor(Math.random() * 15) + 1;
-    console.log(`Nombre aléatoire généré : ${randomNombre}`);
-
-  // Déclencher l'événement correspondant au nombre aléatoire
-  switch (randomNombre) {
-    case 1: displayPersoAvatar(event1),displayAndUseEvent(event1);  break;
-    case 2: displayPersoAvatar(event2),displayAndUseEvent(event2) ; break;
-    case 3: displayPersoAvatar(event3),displayAndUseEvent(event3); break;
-    case 4: displayPersoAvatar(event4),displayAndUseEvent(event4); break;
-    case 5: displayPersoAvatar(event5),displayAndUseEvent(event5); break;
-    case 6: displayPersoAvatar(event6),displayAndUseEvent(event6); break;
-    case 7: displayPersoAvatar(event7),displayAndUseEvent(event7); break;
-    case 8: displayPersoAvatar(event8),displayAndUseEvent(event8); break;
-    case 9: displayPersoAvatar(event9),displayAndUseEvent(event9); break;
-    case 10: displayPersoAvatar(event10),displayAndUseEvent(event10); break;
-    case 11: displayPersoAvatar(event11),displayAndUseEvent(event11); break;
-    case 12: displayPersoAvatar(event12),displayAndUseEvent(event12); break;
-    case 13: displayPersoAvatar(event13),displayAndUseEvent(event13); break;
-    case 14: displayPersoAvatar(event14),displayAndUseEvent(event14); break;
-    case 15: displayPersoAvatar(event15),displayAndUseEvent(event15); break;
-    default: console.log("Nombre aléatoire invalide.");
-  }
+    if (listEvent.length === 0) {
+        localStorage.setItem("end", 0);
+        window.location.href = "end.html";
+    }
+    eventNumber = Math.floor(Math.random() * listEvent.length);
+    displayPersoAvatar(listEvent[eventNumber]);
+    displayAndUseEvent(listEvent[eventNumber]);
+    //suppression de l'événement de la liste
+    listEvent.splice(eventNumber, 1);
+    console.log(listEvent);
 
 }
 
