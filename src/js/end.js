@@ -60,6 +60,10 @@ function loadEnd() {
     
     } else {
         localStorage.setItem("end", 0);
+        gold.innerHTML = player._gold;
+        faith.innerHTML = player._faith;
+        army.innerHTML = player._army;
+        population.innerHTML = player._population;
     }
 }
 
