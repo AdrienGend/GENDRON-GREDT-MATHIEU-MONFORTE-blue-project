@@ -17,11 +17,6 @@ let name = document.querySelector('#name');
 var background = document.getElementsByClassName("background")[0];
 var fin = document.querySelector('.fin');
 
-console.log("or avant" + player._gold);
-console.log("foi avant" + player._faith);
-console.log("army avant" + player._army);
-console.log("bonheur avant" + player._population);
-
 function loadEnd() {
     const messages = [
         "Des sectes se sont formées et ont pris le pouvoir. Vous avez été emprisonné.",
@@ -34,9 +29,9 @@ function loadEnd() {
         "Vous subissez un coup d'État de l'armée. Vous êtes exécuté."
     ];
 
-    if (end >= 0 && end < messages.length) {
+    if (end > 0 && end < messages.length) {
         fin.innerHTML = messages[end-1];
-
+    
         const backgroundImageUrls = [
             "./image/fin-foi0.png",
             "./image/fin-or0.png",
@@ -47,31 +42,24 @@ function loadEnd() {
             "./image/fin-bonheur100.png",
             "./image/fin-militaire100.png"
         ];
-
-        if (end >= 0 && end < backgroundImageUrls.length) {
+    
+        if (end > 0 && end < backgroundImageUrls.length) {
             background.style.backgroundImage = `url('${backgroundImageUrls[end-1]}')`;
         }
-
+    
         if (end === 4) {
             background.style.width = "1920px";
             background.style.height = "1080px";
             p.style.color = "white";
         }
-
+    
         gold.innerHTML = player._gold;
         faith.innerHTML = player._faith;
         army.innerHTML = player._army;
         population.innerHTML = player._population;
-
-
-        console.log("or apres" + player._gold);
-        console.log("foi apres" + player._faith);
-        console.log("army apres" + player._army);
-        console.log("bonheur apres" + player._population);
-
+    
     } else {
         localStorage.setItem("end", 0);
-        window.location.href = "end.html";
     }
 }
 
